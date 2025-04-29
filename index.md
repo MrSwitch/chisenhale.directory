@@ -11,6 +11,8 @@ heroImg: https://files.schudio.com/chisenhale-primary-school/images/banners/Copy
 <article>
     <img src="{{item.data.heroImg}}" />
     <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1> 
+     {% if item.data.strapline %}<p>{{ item.data.strapline }}</p> {% endif %}
+    
 </article>
 {% endfor %}
 </section>
