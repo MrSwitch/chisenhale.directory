@@ -20,7 +20,11 @@
       <menu>
         {% if www %}
         <li><a href="{{ www }}" alt="Visit {{ title }}">{{ www }}</a></li>
-        {% endif %} {% if address %}
+        {% endif %} 
+        {% if instagram %}
+        <li><a href="{{ instagram }}" alt="Visit {{ title }}">{{ instagram }}</a></li>
+        {% endif %}
+        {% if address %}
         <li>
           <a
             target="_blank"
