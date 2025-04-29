@@ -1,5 +1,5 @@
 ---
-title: Chisenhale Primary School Sponsors
+title: Chisenhale Primary School's Little Black Book
 layout: layout.html
 heroImg: https://files.schudio.com/chisenhale-primary-school/images/banners/Copy_of_DSC04158.jpg
 ---
