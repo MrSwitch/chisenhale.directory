@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>{{ title }}</h1>
+      {% if heroImg %}<img src="{{ heroImg }}" alt="{{ title }}" />{% endif %}
+      <menu>
+        {% if www %}
+        <li><a href="{{ www }}" alt="Visit {{ title }}">{{ www }}</a></li>
+        {% endif %} {% if address %}
+        <li>
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query={{ address | url_encode }}"
+            title="The address of {{ title }}"
+            >{{ address }}</a
+          >
+        </li>
+        {% endif %}
+      </menu>
+    </header>
+
+    <main>{{ content }}</main>
+
+    <footer></footer>
+  </body>
+</html>
