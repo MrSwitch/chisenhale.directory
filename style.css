@@ -9,8 +9,7 @@
 
 body {
   font-family:
-    Helvetica Neue,
-    Helvetica,
+    "Poppins", 
     sans-serif;
   color: #4e5260;
   line-height: 2;
@@ -19,7 +18,7 @@ body {
   > main,
   > header > h1 {
     margin: 0 auto 0;
-    padding: 35px 60px 15px;
+    padding: 15px;
     max-width: var(--page-width);
   }
 
@@ -48,12 +47,12 @@ body {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      gap: 1em;
 
       > article {
+        flex: 1 1 300px;
         padding: 10px;
-        margin: 10px;
         width: 100%;
-        max-width: 280px;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
 
