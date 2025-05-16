@@ -1,33 +1,48 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
+  --color-navy: #1c2746;
+  --page-width: 1024px;
+  --bg-color: var(--color-navy);
+
+  color: white;
+  background-color: var(--bg-color);
   font-size: 16px;
   font-weight: 300;
-  --page-width: 1024px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
   font-family:
     "Poppins", 
     sans-serif;
-  color: #4e5260;
   line-height: 2;
   margin: 0;
 
   > main,
-  > header > h1 {
+  > header > h1,
+  > header > menu{
     margin: 0 auto 0;
     padding: 15px;
     max-width: var(--page-width);
   }
 
+
   > header {
-    > img {
+    background-position: center;
+    background-size: cover;
+    min-height: 30vh;
+    /* > img {
       max-height: 200px;
       width: 100%;
       object-fit: cover;
-    }
+    } */
     > menu,
     > nav > ul {
       margin: 0 auto 0;
@@ -38,6 +53,20 @@ body {
         padding-right: 20px;
       }
     }
+
+    > nav {
+      background: linear-gradient(
+        180deg,
+        var(--bg-color) 0,
+        transparent 2em
+      );
+    }
+
+    > menu, > h1 {
+      background-color: color-mix(in srgb, var(--bg-color) 70%, transparent);
+      padding: 1em;
+    }
+
   }
 
   > main {
