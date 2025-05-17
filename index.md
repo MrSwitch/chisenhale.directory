@@ -1,5 +1,5 @@
 ---
-title: Chisenhale Primary School's Little Black Book
+title: Chisenhale Primary School's <br/>Little Black Book
 layout: layout.html
 heroImg: /assets/chisenhale.jpg
 ---
@@ -17,4 +17,3 @@ heroImg: /assets/chisenhale.jpg
 {% endfor %}
 </section>
 
-<i>Disclaimer: Neither Chisenhale Primary School nor any of its staff gives any representation, assurance or guarantee with respect to the services advertised in this directory and accepts no liability for any damage or loss sustained as a result of the provision of any servcies to you by those advertising in the directory</i>

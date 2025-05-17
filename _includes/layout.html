@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="/style.css" />
 
     <title>{{ title }}</title>
+    <style>
+      .heroImage {
+        background-image: linear-gradient(to bottom, var(--bg-color), transparent), url('{{ heroImg }}');
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
   </head>
   <body>
-    <header style="{% if heroImg %}background-image:url('{{ heroImg }}'){% endif %}">
+    <header class="heroImage">
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
@@ -41,6 +48,8 @@
 
     <main>{{ content }}</main>
 
-    <footer></footer>
+    <footer>
+      Disclaimer: Neither Chisenhale Primary School nor any of its staff gives any representation, assurance or guarantee with respect to the services advertised in this directory and accepts no liability for any damage or loss sustained as a result of the provision of any servcies to you by those advertising in the directory
+    </footer>
   </body>
 </html>
