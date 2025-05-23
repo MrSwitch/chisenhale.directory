@@ -1,5 +1,5 @@
 ---
-# title: Chisenhale Primary School's <br/>Little Black Book
+# title: Little Black Book
 layout: layout.html
 heroImg: /assets/chisenhale.jpg
 ---
