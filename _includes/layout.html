@@ -3,45 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/style.css" />
 
     <title>{{ title }}</title>
+    <style>
+      .heroImage {
+        background-image:
+          linear-gradient(to bottom, white, transparent), url("{{ heroImg }}");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
   </head>
   <body>
-    <header>
+    <header class="heroImage">
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
-      <h1>{{ title }}</h1>
-      {% if heroImg %}<img src="{{ heroImg }}" alt="{{ title }}" />{% endif %}
-      <menu>
-        {% if www %}
-        <li><a href="{{ www }}" alt="Visit {{ title }}">{{ www }}</a></li>
-        {% endif %} 
-        {% if instagram %}
-        <li><a href="{{ instagram }}" alt="Visit {{ title }}">{{ instagram }}</a></li>
-        {% endif %}
-        {% if address %}
-        <li>
-          <a
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query={{ address | url_encode }}"
-            title="The address of {{ title }}"
-            >{{ address }}</a
-          >
-        </li>
-        {% endif %}
-      </menu>
+      <a href="/"
+        ><img src="/assets/logo.svg" alt="Chisenhale Little Black Books Logo"
+      /></a>
+      {% if title %}
+      <h1 class="heroTitle">{{ title }}</h1>
+      {% endif %}
     </header>
+
+    <menu>
+      {% if www %}
+      <li><a href="{{ www }}" alt="Visit {{ title }}">{{ www }}</a></li>
+      {% endif %} {% if instagram %}
+      <li>
+        <a href="{{ instagram }}" alt="Visit {{ title }}">{{ instagram }}</a>
+      </li>
+      {% endif %} {% if address %}
+      <li>
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/search/?api=1&query={{ address | url_encode }}"
+          title="The address of {{ title }}"
+          >{{ address }}</a
+        >
+      </li>
+      {% endif %}
+    </menu>
 
     <main>{{ content }}</main>
 
-    <footer></footer>
+    <footer>
+      Disclaimer: Neither Chisenhale Primary School nor any of its staff gives
+      any representation, assurance or guarantee with respect to the services
+      advertised in this directory and accepts no liability for any damage or
+      loss sustained as a result of the provision of any servcies to you by
+      those advertising in the directory
+    </footer>
   </body>
 </html>
