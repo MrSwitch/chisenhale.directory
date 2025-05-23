@@ -73,7 +73,7 @@ body {
       position: absolute;
       left: calc(100% / 2 - var(--page-width) / 2);
 
-      @media (width <= 1024px) {
+      @media (max-width: 1024px) {
         & {
           left: 0;
         }
