@@ -10,11 +10,11 @@ heroImg: /assets/chisenhale.jpg
 {% for item in collections.companies %}
 {% if item.data.tier == 1 %}
 <a href="{{ item.url }}">
-    <article>
-        <img src="{{item.data.heroImg}}" />
-        <h1>{{ item.data.title }}</h1> 
-        {% if item.data.strapline %}<p>{{ item.data.strapline }}</p> {% endif %}
-    </article>
+<article>
+    <img src="{{item.data.heroImg}}" />
+    <h1>{{ item.data.title }}</h1> 
+    {% if item.data.strapline %}<p>{{ item.data.strapline }}</p> {% endif %}
+</article>
 </a>
 {% endif %}
 {% endfor %}
