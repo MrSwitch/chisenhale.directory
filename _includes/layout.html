@@ -1,4 +1,6 @@
-{% assign index = collections.sponsors | getCollectionItemIndex %}
+{% assign index = collections.sponsors | getCollectionItemIndex %} {% assign
+previousPost = collections.sponsors | getPreviousCollectionItem : page %} {%
+assign nextPost = collections.sponsors | getNextCollectionItem : page %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -65,6 +67,16 @@
     </menu>
 
     <main>{{ content }}</main>
+
+    <aside>
+      {% if previousPost %}
+      <li>
+        Prev: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+      </li>
+      {% endif %} {% if nextPost %}
+      <li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>
+      {% endif %}
+    </aside>
 
     <footer>
       Disclaimer: Neither Chisenhale Primary School nor any of its staff gives
