@@ -106,7 +106,6 @@ body {
         flex: 1 1 300px;
         width: 100%;
         > article {
-          padding: 10px;
           width: inherit;
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
           border-radius: 10px;
@@ -123,6 +122,11 @@ body {
             aspect-ratio: 16 / 9;
             width: 100%;
             object-fit: cover;
+            padding: 0;
+          }
+          > * {
+            padding: 1em;
+            margin: 0;
           }
         }
       }
