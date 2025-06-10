@@ -1,8 +1,7 @@
 ---
 title: Minos Wealth
 heroImg: https://cdn.prod.website-files.com/5c936c8b61394f02ea57fe73/633fefefb8c5af5e17af34e6_DSC01957%20(1)-min.webp
-address: www.minoswealth.com  
-LinkedIn: https://www.linkedin.com/in/tobybarklem/   
+www: https://www.minoswealth.com
 strapline: Chartered Financial Planner & Principal
 ---
 
@@ -10,5 +9,6 @@ At Minos Wealth, we guide our clients to the life they’ve always wanted. Wheth
 
 If you want a plan for what lies ahead, we provide confidential financial planning services that work for you, your lifestyle and your family.
 
-T: 0203 488 5524
-E: hello@minoswealth.com
+- T: 0203 488 5524
+- E: hello@minoswealth.com
+- LI: https://www.linkedin.com/in/tobybarklem/
