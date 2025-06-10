@@ -42,19 +42,13 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
       /></a>
       {% if title %}
       <h1 class="heroTitle" style="view-transition-name: heading-{{ index }};">
-        {{ title }}
+        {% if logoTitle %}<img class="logoTitle" src="{{ logoTitle }}" alt="{{ title }}" />{% else %}{% if logo %}<img class="logo" src="{{ logo }}" alt="{{ title }}" />{% endif %}{{ title }}{% endif %}
       </h1>
       {% endif %}
     </header>
 
     <menu>
-      {% if www %}
-      <li><a href="{{ www }}" alt="Visit {{ title }}">{{ www }}</a></li>
-      {% endif %} {% if instagram %}
-      <li>
-        <a href="{{ instagram }}" alt="Visit {{ title }}">{{ instagram }}</a>
-      </li>
-      {% endif %} {% if location %}
+      {% if location %}
       <li>
         <a
           target="_blank"

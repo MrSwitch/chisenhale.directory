@@ -8,4 +8,4 @@ This site promotes business around Chisenhale School in Bow. And showcases how m
 
 The site is maintained by members of the [Chisenhale School PTA](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5097230/charity-overview) and is supported by the school - links to this site can be found on the official Chisenhale school site [https://chisenhale.towerhamlets.sch.uk/](https://chisenhale.towerhamlets.sch.uk/).
 
-If you would like to help the school raise money please get in contact. <a href="mailto:ptachisenhale@gmail.com">ptachisenhale@gmail.com</a>
+If you would like to help the school raise money please get in contact. [ptachisenhale@gmail.com](mailto:ptachisenhale@gmail.com)
