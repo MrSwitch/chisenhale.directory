@@ -2,7 +2,7 @@
 title: Bike Mechanic
 heroImg: https://romanroadlondon.com/wp-content/uploads/2024/09/roman-bikes-shop-roman-road-2.jpg
 www: https://romanroadlondon.com/best-cycle-repair-shop-bow-mile-end-globe-town-hackney-wick-fish-island/
-address: Roman Bikes, 437 Roman Road, London R3 5LX
+location: Roman Bikes, 437 Roman Road, London R3 5LX
 tier: 2
 ---
 

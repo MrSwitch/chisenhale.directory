@@ -54,13 +54,13 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
       <li>
         <a href="{{ instagram }}" alt="Visit {{ title }}">{{ instagram }}</a>
       </li>
-      {% endif %} {% if address %}
+      {% endif %} {% if location %}
       <li>
         <a
           target="_blank"
-          href="https://www.google.com/maps/search/?api=1&query={{ address | url_encode }}"
+          href="https://www.google.com/maps/search/?api=1&query={{ location | url_encode }}"
           title="The address of {{ title }}"
-          >{{ address }}</a
+          >{{ location }}</a
         >
       </li>
       {% endif %}
