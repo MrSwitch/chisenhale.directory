@@ -1,6 +1,6 @@
 ---
 title: Nourish Communications
-heroImg: https://cdn.prod.website-files.com/5c936c8b61394f02ea57fe73/633fefefb8c5af5e17af34e6_DSC01957%20(1)-min.webp
+heroImg: /assets/nourish_header.svg
 instagram: https://www.instagram.com/powerhousepositioning/
 strapline: Branding and communications support for small business owners 
 ---
@@ -13,5 +13,5 @@ Want to supercharge your business in just 10 minutes? I’ve got a free workshop
 
 - T: 07989 854274
 - E: rebecca@nourishyourbrand.com
-- W: https://www.nourishyourbrand.com
-- LI: https://www.linkedin.com/in/rebecca-miles-writer/
+- W: [Nourish Your Brand](https://www.nourishyourbrand.com)
+- LI: [Nourish on LinkedIn](https://www.linkedin.com/in/rebecca-miles-writer/)
