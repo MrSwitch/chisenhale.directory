@@ -1,7 +1,6 @@
 ---
 title: Nourish Communications
 heroImg: https://cdn.prod.website-files.com/5c936c8b61394f02ea57fe73/633fefefb8c5af5e17af34e6_DSC01957%20(1)-min.webp
-address: www.nourishyourbrand.com 
 instagram: https://www.instagram.com/powerhousepositioning/
 strapline: Branding and communications support for small business owners 
 ---
@@ -10,9 +9,9 @@ At Nourish Communications, I help small business owners articulate themselves wi
 
 If you’re struggling to communicate your services or feeling overwhelmed by the reams of generic content that ChatGPT delivers, then get in touch to learn more about how I can provide a sanity check for your business. 
 
-Want to supercharge your business in just 10 minutes? I’ve got a free workshop for you that’ll do just that: https://powerhousepositioning.com/supercharge-your-business-in-10-minutes
+Want to supercharge your business in just 10 minutes? I’ve got a free workshop for you that’ll do just that: [Sign up here](https://powerhousepositioning.com/supercharge-your-business-in-10-minutes)
 
-T: 07989 854274
-E: rebecca@nourishyourbrand.com
-W: www.nourishyourbrand.com
-LI: https://www.linkedin.com/in/rebecca-miles-writer/
+- T: 07989 854274
+- E: rebecca@nourishyourbrand.com
+- W: https://www.nourishyourbrand.com
+- LI: https://www.linkedin.com/in/rebecca-miles-writer/
