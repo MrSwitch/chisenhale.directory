@@ -11,4 +11,5 @@ If you want a plan for what lies ahead, we provide confidential financial planni
 
 - T: 0203 488 5524
 - E: hello@minoswealth.com
-- LI: https://www.linkedin.com/in/tobybarklem/
+- W: [Minos Wealth](https://www.minoswealth.com)
+- LI: [Minos Wealth on LinkedIn](https://www.linkedin.com/in/tobybarklem/)
