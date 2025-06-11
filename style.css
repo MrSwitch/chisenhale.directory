@@ -144,7 +144,10 @@ body > main > section {
     color: inherit;
     flex: 1 1 300px;
     width: 100%;
+    align-self: stretch;
+
     > article {
+      height: 100%;
       width: inherit;
       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
       border-radius: 10px;
@@ -165,9 +168,13 @@ body > main > section {
         z-index: -1;
       }
       > * {
-        padding: 1em;
+        padding: 0 1em;
         margin: 0;
       }
+      > *:last-child {
+        padding-bottom: 1em;
+      }
+
     }
   }
 }
