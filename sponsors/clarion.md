@@ -1,6 +1,7 @@
 ---
 title: Clarion
 heroImg: https://cdn.myclarionhousing.com/-/jssmedia/clarion-housing-association/images/campaigns/resident-hero-awards.jpg?w=1920&h=auto&mw=1920&rev=b25e92dc4a374d219bec96e313600944
+strapline: The UK's largest housing association  
 www: https://www.myclarionhousing.com/
 ---
 
