@@ -1,7 +1,7 @@
 ---
 # title: Little Black Book
 layout: layout.html
-heroImg: /assets/chisenhale.jpg
+heroImg: /assets/chisenhale-hero.webp
 ---
 
 ## Gold Sponsors

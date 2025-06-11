@@ -5,7 +5,8 @@ strapline: Offering a delicious selection of snacks and hot drinks
 ---
 
 A neighbourhood cafe on Roman Road serving coffee, breakfast and lunch.
-Open 7 days a week
-M-F 08-1600
-S&S 09-1600
-kitchen closes at 3
+
+- Open 7 days a week
+- M-F 08-1600
+- S&S 09-1600
+- kitchen closes at 3

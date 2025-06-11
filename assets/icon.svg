@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<svg width="75" height="75" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <g id="svg_1"/>
+  <clipPath id="b1316280fa">
+   <path clip-rule="nonzero" d="m32,50.42l52.02,0l0,62.71l-52.02,0l0,-62.71zm0,0" id="svg_2"/>
+  </clipPath>
+  <clipPath id="2c3c80be5f">
+   <path clip-rule="nonzero" d="m30.52,101l5.48,0l0,3l-5.48,0l0,-3zm0,0" id="svg_3"/>
+  </clipPath>
+  <clipPath id="7e293021f5">
+   <path clip-rule="nonzero" d="m30.52,93l5.48,0l0,3l-5.48,0l0,-3zm0,0" id="svg_4"/>
+  </clipPath>
+  <clipPath id="c4be97b905">
+   <path clip-rule="nonzero" d="m30.52,85l5.48,0l0,3l-5.48,0l0,-3zm0,0" id="svg_5"/>
+  </clipPath>
+  <clipPath id="471f0f4423">
+   <path clip-rule="nonzero" d="m30.52,77l5.48,0l0,3l-5.48,0l0,-3zm0,0" id="svg_6"/>
+  </clipPath>
+  <clipPath id="5d38b12c67">
+   <path clip-rule="nonzero" d="m30.52,69l5.48,0l0,3l-5.48,0l0,-3zm0,0" id="svg_7"/>
+  </clipPath>
+  <clipPath id="5dfe493daf">
+   <path clip-rule="nonzero" d="m30.52,61l5.48,0l0,3l-5.48,0l0,-3zm0,0" id="svg_8"/>
+  </clipPath>
+  <clipPath id="0128c24332">
+   <path clip-rule="nonzero" d="m32,50.42l46,0l0,57.58l-46,0l0,-57.58zm0,0" id="svg_9"/>
+  </clipPath>
+  <clipPath id="c29697c90a">
+   <path clip-rule="nonzero" d="m30.52,53l5.48,0l0,3l-5.48,0l0,-3zm0,0" id="svg_10"/>
+  </clipPath>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g clip-path="url(#b1316280fa)" id="svg_11" transform="translate(0.25 2.5) translate(-0.75 -4) translate(-15 -15) matrix(1 0 0 1 -4.13244 -26.8238)">
+   <path d="m79.55,50.84l0,54.4c0,2.32 -1.9,4.21 -4.22,4.21l-42.6,0l0,4.27l44.91,0c3.64,0 6.61,-2.98 6.61,-6.61l0,-49.95c0,-2.96 -1.95,-5.5 -4.7,-6.32" fill="#fbc33c" fill-rule="nonzero" id="svg_12"/>
+  </g>
+  <g clip-path="url(#2c3c80be5f)" id="svg_13" transform="translate(0.25 2.5) translate(-0.75 -4) translate(-15 -15) matrix(1 0 0 1 -4.13244 -26.8238)">
+   <path d="m35.98,103.3l0,-2.02l-5.43,0l0,2.02l5.43,0" fill="#fbc33c" fill-rule="nonzero" id="svg_14"/>
+  </g>
+  <g clip-path="url(#7e293021f5)" id="svg_15" transform="translate(0.25 2.5) translate(-0.75 -4) translate(-15 -15) matrix(1 0 0 1 -4.13244 -26.8238)">
+   <path d="m35.98,95.34l0,-2.01l-5.43,0l0,2.01l5.43,0" fill="#fbc33c" fill-rule="nonzero" id="svg_16"/>
+  </g>
+  <g clip-path="url(#c4be97b905)" id="svg_17" transform="translate(0.25 2.5) translate(-0.75 -4) translate(-15 -15) matrix(1 0 0 1 -4.13244 -26.8238)">
+   <path d="m35.98,87.39l0,-2.01l-5.43,0l0,2.01l5.43,0" fill="#fbc33c" fill-rule="nonzero" id="svg_18"/>
+  </g>
+  <g clip-path="url(#471f0f4423)" id="svg_19" transform="translate(0.25 2.5) translate(-0.75 -4) translate(-15 -15) matrix(1 0 0 1 -4.13244 -26.8238)">
+   <path d="m35.98,79.45l0,-2.02l-5.43,0l0,2.02l5.43,0" fill="#fbc33c" fill-rule="nonzero" id="svg_20"/>
+  </g>
+  <g clip-path="url(#5d38b12c67)" id="svg_21" transform="translate(0.25 2.5) translate(-0.75 -4) translate(-15 -15) matrix(1 0 0 1 -4.13244 -26.8238)">
+   <path d="m35.98,71.49l0,-2.01l-5.43,0l0,2.01l5.43,0" fill="#fbc33c" fill-rule="nonzero" id="svg_22"/>
+  </g>
+  <g clip-path="url(#5dfe493daf)" id="svg_23" transform="translate(0.25 2.5) translate(-0.75 -4) translate(-15 -15) matrix(1 0 0 1 -4.13244 -26.8238)">
+   <path d="m35.98,63.54l0,-2.01l-5.43,0l0,2.01l5.43,0" fill="#fbc33c" fill-rule="nonzero" id="svg_24"/>
+  </g>
+  <g clip-path="url(#0128c24332)" id="svg_25" transform="translate(0.25 2.5) translate(-0.75 -4) matrix(1 0 0 1 -19.1324 -41.8238)">
+   <path d="m36.79,56.41l-4.06,0l0,4.31l4.06,0l0,3.64l-4.06,0l0,4.3l4.06,0l0,3.64l-4.06,0l0,4.32l4.06,0l0,3.64l-4.06,0l0,4.31l4.06,0l0,3.64l-4.06,0l0,4.31l4.06,0l0,3.64l-4.06,0l0,4.31l4.06,0l0,3.64l-4.06,0l0,3.33l42.6,0c1.21,0 2.19,-0.99 2.19,-2.2l0,-54.69l-44.79,0l0,2.22l4.06,0l0,3.64" fill="#1c2746" fill-rule="nonzero" id="svg_26"/>
+  </g>
+  <g clip-path="url(#c29697c90a)" id="svg_27" transform="translate(0.25 2.5) translate(-0.75 -4) translate(-15 -15) matrix(1 0 0 1 -4.13244 -26.8238)">
+   <path d="m35.98,55.59l0,-2.01l-5.43,0l0,2.01l5.43,0" fill="#fbc33c" fill-rule="nonzero" id="svg_28"/>
+  </g>
+  <g fill="#1c2746" id="svg_29" transform="matrix(1, 0, 0, 1, 321.996399, 165.009857)">
+   <g id="svg_30" transform="translate(285.475029, 73.518803)">
+    <g id="svg_31"/>
+   </g>
+  </g>
+  <g fill="#1c2746" id="svg_32" transform="matrix(1, 0, 0, 1, 321.996399, 165.009857)">
+   <g id="svg_33" transform="translate(206.045504, 108.25693)">
+    <g id="svg_34"/>
+   </g>
+  </g>
+  <g fill="#1c2746" id="svg_35" transform="matrix(1, 0, 0, 1, 321.996399, 165.009857)">
+   <g id="svg_36" transform="translate(321.04861, 108.25693)">
+    <g id="svg_37"/>
+   </g>
+  </g>
+ </g>
+</svg>

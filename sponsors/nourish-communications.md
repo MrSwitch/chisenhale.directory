@@ -1,7 +1,7 @@
 ---
 title: Nourish Communications
 heroImg: /assets/nourish_header.svg
-instagram: https://www.instagram.com/powerhousepositioning/
+logoTitle: /assets/nourish-logo.png
 strapline: Branding and communications support for small business owners 
 ---
 
@@ -15,3 +15,5 @@ Want to supercharge your business in just 10 minutes? I’ve got a free workshop
 - E: rebecca@nourishyourbrand.com
 - W: [Nourish Your Brand](https://www.nourishyourbrand.com)
 - LI: [Nourish on LinkedIn](https://www.linkedin.com/in/rebecca-miles-writer/)
+- Insta: [Nourish on Instagram](https://www.instagram.com/powerhousepositioning/)
+
