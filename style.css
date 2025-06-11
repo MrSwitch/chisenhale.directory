@@ -221,13 +221,13 @@ body > aside {
   display: flex;
   list-style: none;
   justify-content: center;
-  align-items: top;
+  align-items: flex-start;
 
   > li {
     flex: 1;
     padding: 0 0.5rem;
     position: relative;
-    vertical-align: top;
+    align-self: stretch;
     text-align: right;
 
     &:last-of-type {
