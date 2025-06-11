@@ -13,9 +13,9 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
       content="{{ title | default: 'Little Black Book' }}"
     />
     <meta property="og:site_name" content="Little Black Book" />
-    <link rel="expect" blocking="render" href=".heroTitle" />
-    <link rel="expect" blocking="render" href=".logo" />
-    <link rel="expect" blocking="render" href=".heroImage" />
+    <link rel="expect" blocking="render" href="#sponsorLogo" />
+    <link rel="expect" blocking="render" href="#chisenhaleLogoImg" />
+    <link rel="expect" blocking="render" href="#heroImage" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,24 +26,24 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
     <link rel="stylesheet" href="/style.css" />
     <title>{{ title | default: 'Little Black Book'}}</title>
   </head>
-  <body>
+  <body {% if page.url == "/" %} class="isHomePage"{% endif %}>
     <header>
-      <img class="heroImage" src="{{ heroImg }}" />
+      <img id="heroImage" class="heroImage" src="{{ heroImg }}" />
       <nav>
+        <a id="chisenhaleLogo" href="/"
+          ><img
+            id="chisenhaleLogoImg"
+            src="/assets/logo.svg"
+            alt="Chisenhale Little Black Books Logo"
+        /></a>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
-      <a href="/"
-        ><img
-          id="logo"
-          src="/assets/logo.svg"
-          alt="Chisenhale Little Black Books Logo"
-      /></a>
       {% if title %}
       <h1 class="heroTitle" style="view-transition-name: heading-{{ index }};">
-        {% if logoTitle %}<img class="logoTitle" src="{{ logoTitle }}" alt="{{ title }}" />{% else %}{% if logo %}<img class="logo" src="{{ logo }}" alt="{{ title }}" />{% endif %}{{ title }}{% endif %}
+        {% if logoTitle %}<img class="logoTitle" src="{{ logoTitle }}" alt="{{ title }}" />{% else %}{% if logo %}<img id="sponsorLogo" class="logo" src="{{ logo }}" alt="{{ title }}" />{% endif %}{{ title }}{% endif %}
       </h1>
       {% endif %}
     </header>
@@ -74,11 +74,9 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
     </aside>
 
     <footer>
-      Disclaimer: Neither Chisenhale Primary School nor any of its staff gives
-      any representation, assurance or guarantee with respect to the services
-      advertised in this directory and accepts no liability for any damage or
-      loss sustained as a result of the provision of any servcies to you by
-      those advertising in the directory
+      <p>
+        Little Black Book <a href="/contact">About, Contact and Disclaimer</a>
+      </p>
     </footer>
   </body>
 </html>

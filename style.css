@@ -33,6 +33,7 @@ body {
 
 main,
 header > h1,
+header > nav,
 menu {
   margin: 0 auto 0;
   padding: 15px;
@@ -61,30 +62,58 @@ body > header {
 
   /* text-shadow: 0.1em 0.1em #1116; */
 
-  > a > img {
-    max-width: -webkit-fill-available;
+  > nav {
 
     @media (orientation: landscape) and (max-height: 500px) {
-      display:none;
+      /* text-align: right; */
     }
-  }
 
-  > nav > ul {
-    margin: 0 auto 0;
-    list-style: none;
-
-    > li {
+    > a#chisenhaleLogo {
       display: inline-block;
+      vertical-align: -webkit-baseline-middle;
       padding-right: 20px;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
+      view-transition-name: chisenhaleLogo;
+      position: relative;
+
+      .isHomePage & {
+        position: absolute;
+        top: 100px;
+      }
+
+      img {
+        max-width: 80vw;
+        max-height: 3em;
+  
+        .isHomePage & {
+          max-height: none;
+          width: -webkit-fill-available;
+          max-width: min(calc(var(--page-width) / 2), 80vw);
+        }
       }
     }
-  }
+
+    > ul {
+        margin: 0;
+        list-style: none;
+        padding-inline-start: 0;
+        display: inline-block;
+        vertical-align: -webkit-baseline-middle;
+
+        > li {
+          display: inline-block;
+          padding: 0;
+          margin: 0;
+          padding-right: 20px;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
 
   > h1 {
     /* text-shadow: 0.1em 0.1em #1116; */
@@ -192,17 +221,29 @@ body > aside {
   display: flex;
   list-style: none;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   > li {
+    flex: 1;
     padding: 0 0.5rem;
     position: relative;
+    align-self: stretch;
+    text-align: right;
+
+    &:last-of-type {
+      text-align: left;
+    }
+    &:only-child {
+      text-align: center;
+    }
 
     & + li::before {
-      content: "|";
+      content: "";
       position: absolute;
       left: 0;
-      color: #999;
+      height: 100%;
+      width: 1px;
+      background-color: var(--color-navy);
     }
   }
 }
@@ -218,6 +259,10 @@ footer {
   background-color: var(--color-navy);
   text-align: center;
   box-shadow: inset 0 10px 10px black;
+
+  & a {
+    color: var(--color-yellow);
+  }
 }
 
 /**********************
