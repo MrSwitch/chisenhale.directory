@@ -10,7 +10,7 @@ heroImg: https://files.schudio.com/chisenhale-primary-school/images/banners/Copy
 
 The directory is intended to help parents and carers find local businesses and services, and to support the school community.
 
-If you would like to sponsor the school and have your business or service list in the directory, please get in contact
+If you would like to sponsor the school and have your business or service list in the directory, please get in contact.
 
 ## Contact
 
