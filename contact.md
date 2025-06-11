@@ -1,11 +1,27 @@
 ---
-title: About Chisenhale Sponsors
+title: Information about Little Black Book
 layout: layout.html
 heroImg: https://files.schudio.com/chisenhale-primary-school/images/banners/Copy_of_DSC04158.jpg
 ---
 
-This site promotes business around Chisenhale School in Bow. And showcases how money donated by companies has helped raise tens of thousands of pounds for the school.
+## About
 
-The site is maintained by members of the [Chisenhale School PTA](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5097230/charity-overview) and is supported by the school - links to this site can be found on the official Chisenhale school site [https://chisenhale.towerhamlets.sch.uk/](https://chisenhale.towerhamlets.sch.uk/).
+[Chisenhale Little Black Book](https://chisenhale.directory) is a directory of local businesses and services, run by [Chisenhale Primary School PTA](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5097230/charity-overview) in Tower Hamlets, London.
 
-If you would like to help the school raise money please get in contact. [ptachisenhale@gmail.com](mailto:ptachisenhale@gmail.com)
+The directory is intended to help parents and carers find local businesses and services, and to support the school community.
+
+If you would like to sponsor the school and have your business or service list in the directory, please get in contact
+
+## Contact
+
+- Email [ptachisenhale@gmail.com](mailto:ptachisenhale@gmail.com)
+- School Website [https://chisenhale.towerhamlets.sch.uk/](https://chisenhale.towerhamlets.sch.uk/)
+- Reception: *0208 980 2584*
+
+## Disclaimer
+
+Disclaimer: Neither Chisenhale Primary School nor any of its staff gives
+any representation, assurance or guarantee with respect to the services
+advertised in this directory and accepts no liability for any damage or
+loss sustained as a result of the provision of any servcies to you by
+those advertising in the directory
