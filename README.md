@@ -2,13 +2,15 @@
 
 Hello, welcome to the code base for [//chisenhale.directory](https://) website.
 
-⚠️ First things first: Any changes made to the `main` branch will trigger a rebuild and all being well will deploy straight to the website... warts and all!
+> [!CAUTION]
+> First things first: Any changes made to the `main` branch will trigger a rebuild and all being well will deploy straight to the website, warts and all!
 
 
 # 🧾 Overview
 
 Here's the rough file structure...
 
+```
 .
 ├── .github/workflows/    # ⚠️🔥 Controls publishing the website
 ├── sponsors/             # 📄 This is a list of *.md files which contain our sponsors
@@ -17,6 +19,7 @@ Here's the rough file structure...
 │   └── layout.html       # ⚠️ Layout file, describes how the pages are converted to HTML
 ├── style.css             # 🌈 CSS Styles
 └── index.md              # 🏠 Homepage
+```
 
 🔥 There are other files in there, please dont touch those 🔥
 
@@ -29,11 +32,12 @@ To add a sponsor, start by copying an file in the sponsors/ directory. The forma
 ## File naming
 The file name should have lowercase characters, with a `-` between words and end in `*.md`.
 
-- `my great company!.md` ❌ shouldn't contain strange characters, i.e. `!`
-- `my great company.md`  ❌ spaces are bad
-- `my-great-company`     ❌ doesn't end in `.md`
-- `my-great-company.md`  ✅ Perfect!
-
+```
+my great company!.md  // ❌ shouldn't contain strange characters, i.e. `!`
+my great company.md   // ❌ spaces are bad
+my-great-company      // ❌ doesn't end in `.md`
+my-great-company.md   // ✅ Perfect!
+```
 
 ## Linking to assets
 
