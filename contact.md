@@ -14,8 +14,8 @@ If you would like to sponsor the school and have your business or service list i
 
 ## Contact
 
-- Email [ptachisenhale@gmail.com](mailto:ptachisenhale@gmail.com)
-- School Website [https://chisenhale.towerhamlets.sch.uk/](https://chisenhale.towerhamlets.sch.uk/)
+- Email: {% obfusicate "ptachisenhale@gmail.com" %}
+- School Website: [https://chisenhale.towerhamlets.sch.uk/](https://chisenhale.towerhamlets.sch.uk/)
 - Reception: *0208 980 2584*
 
 ## Disclaimer
