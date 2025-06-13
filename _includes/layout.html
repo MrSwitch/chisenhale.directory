@@ -7,10 +7,16 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/assets/icon.svg" type="image/svg">
+    <title>{{ title | default: 'Little Black Book'}}</title>
+    <meta name="description" content="{{ strapline | default: 'Supporting Chisenhale School' }}">
     <meta property="og:image" content="{{ heroImg }}" />
     <meta
       property="og:title"
       content="{{ title | default: 'Little Black Book' }}"
+    />
+    <meta
+      property="og:description"
+      content="{{ strapline | default: 'Supporting Chisenhale School' }}"
     />
     <meta property="og:site_name" content="Little Black Book" />
     <link rel="expect" blocking="render" href="#sponsorLogo" />
@@ -24,11 +30,10 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/style.css" />
-    <title>{{ title | default: 'Little Black Book'}}</title>
   </head>
   <body {% if page.url == "/" %} class="isHomePage"{% endif %}>
     <header>
-      <img id="heroImage" class="heroImage" src="{{ heroImg }}" />
+      <img id="heroImage" class="heroImage" src="{{ heroImg }}" alt="" />
       <nav>
         <a id="chisenhaleLogo" href="/"
           ><img
@@ -64,13 +69,15 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
     <main>{{ content }}</main>
 
     <aside>
-      {% if previousPost %}
-      <li>
-        Prev: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-      </li>
-      {% endif %} {% if nextPost %}
-      <li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>
-      {% endif %}
+      <menu>
+        {% if previousPost %}
+        <li>
+          Prev: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        </li>
+        {% endif %} {% if nextPost %}
+        <li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>
+        {% endif %}
+      </menu>
     </aside>
 
     <footer>

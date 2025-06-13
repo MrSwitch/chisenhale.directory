@@ -1,6 +1,7 @@
 ---
 title: Butler & Stag
 heroImg: https://images.estatesit.uk/https://www.butlerandstag.uk/content/images/slideshow/6-960.jpg?format=webp
+strapline: Selling & Letting Agent In Bow, Shoreditch, Theydon Bois, Epping, Chingford, Buckhurst Hill & Chelmsford
 tier: 1
 ---
 
