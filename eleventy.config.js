@@ -1,4 +1,10 @@
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
 export default function (eleventyConfig) {
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		widths: ["1800"],
+    formats: ["webp"],
+  });
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("assets");
