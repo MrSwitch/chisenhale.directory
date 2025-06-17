@@ -83,6 +83,8 @@ body > header {
       img {
         max-width: 80vw;
         max-height: 3em;
+        width: auto;
+        height: auto;
   
         .isHomePage & {
           max-height: none;
@@ -192,6 +194,7 @@ body > main > section {
       > img {
         aspect-ratio: 16 / 9;
         width: 100%;
+        height: auto;
         object-fit: cover;
         padding: 0;
         z-index: -1;
