@@ -11,7 +11,7 @@ heroImg: /assets/chisenhale-hero.webp
 {% if item.data.tier == 1 %}
 <a href="{{ item.url }}">
 <article>
-    <img src="{{item.data.heroImg}}" />
+    <img src="{{item.data.heroImg}}" alt=""/>
     <h1 style="view-transition-name: heading-{{ forloop.index }};">{{ item.data.title }}</h1> 
     {% if item.data.strapline %}<p>{{ item.data.strapline }}</p> {% endif %}
 </article>
@@ -27,7 +27,7 @@ heroImg: /assets/chisenhale-hero.webp
 {% if item.data.tier != 1 %}
 <a href="{{ item.url }}">
 <article>
-    <img src="{{item.data.heroImg}}" />
+    <img src="{{item.data.heroImg}}" alt=""/>
     <h1 style="view-transition-name: heading-{{ forloop.index }};">{{ item.data.title }}</h1> 
      {% if item.data.strapline %}<p>{{ item.data.strapline }}</p> {% endif %}
 </article>
