@@ -86,6 +86,8 @@ menu {
       img {
         max-width: 80vw;
         max-height: 3em;
+        width: auto;
+        height: auto;
   
         .isHomePage & {
           max-height: none;
@@ -195,6 +197,10 @@ main {
       transition:
         box-shadow 0.2s ease,
         transform 0.2s ease;
+      
+      h1 {
+        font-size: 1.17em;
+      }
 
       &:hover {
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
@@ -204,16 +210,17 @@ main {
       > img {
         aspect-ratio: 16 / 9;
         width: 100%;
+        height: auto;
         object-fit: cover;
         padding: 0;
         z-index: -1;
       }
       > * {
-        padding: 0 1em;
+        padding: 0 1rem;
         margin: 0;
       }
       > *:last-child {
-        padding-bottom: 1em;
+        padding-bottom: 1rem;
       }
 
     }
@@ -224,7 +231,7 @@ main {
  * Aside: Navigating between sponsors
  **********************/
 
-body > aside {
+body > aside > menu {
   display: flex;
   list-style: none;
   justify-content: center;
