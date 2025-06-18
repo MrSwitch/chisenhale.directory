@@ -3,12 +3,14 @@
 }
 
 :root {
+  --color-white: #fff;
   --color-navy: #1c2746;
   --color-yellow: #fdc608;
   --page-width: 1024px;
-  --bg-color: #fff;
+  --bg-color: var(--color-white);
+  --text-color: var(--color-navy);
 
-  color: var(--color-navy);
+  color: var(--text-color);
   background-color: var(--bg-color);
   font-size: 16px;
   font-weight: 300;
@@ -40,15 +42,16 @@ menu {
   max-width: var(--page-width);
 }
 
-/**
+/**********************
  * Header
- */
-body > header {
+ **********************/
+
+ body > header {
   background-position: center;
   background-size: cover;
   min-height: 50vh;
   position: relative;
-  background-image: linear-gradient(to bottom, white, transparent);
+  background-image: linear-gradient(to bottom, var(--bg-color), transparent);
   height: 50vh;
 
   > img.heroImage {
@@ -143,26 +146,35 @@ body > header {
   }
 }
 
-/**
+/**********************
+ * Main Content
+ **********************/
+
+main {
+  flex: 1;
+  width:100%;
+  margin-bottom: 50px;
+}
+
+
+/**********************
  * Sponsor Menu
- */
-body > menu {
+ **********************/
+
+ body > menu {
   margin: 0 auto 0;
   list-style: none;
-
-  a {
-    color: -webkit-link;
-  }
 
   > li {
     padding-right: 20px;
   }
 }
 
-/**
+/**********************
  * Home Page Sponsors
- */
-body > main > section {
+ **********************/
+
+ body > main > section {
   flex-flow: row wrap;
   display: flex;
   flex-direction: row;
@@ -215,15 +227,10 @@ body > main > section {
   }
 }
 
-main {
-  flex: 1;
-  width:100%;
-  margin-bottom: 50px;
-}
-
-/**
+/**********************
  * Aside: Navigating between sponsors
- */
+ **********************/
+
 body > aside > menu {
   display: flex;
   list-style: none;
@@ -255,10 +262,12 @@ body > aside > menu {
   }
 }
 
-/**
+/**********************
  * Footer
- */
-footer {
+ **********************/
+
+
+body > footer {
   margin-top: 1vh;
   padding: 1em max(1em, calc((100% - var(--page-width)) / 2));
   font-size: 0.8em;
@@ -266,11 +275,29 @@ footer {
   background-color: var(--color-navy);
   text-align: center;
   box-shadow: inset 0 10px 10px black;
+  filter: grayscale(80%);
 
   & a {
     color: var(--color-yellow);
   }
 }
+
+/**********************
+* DARK/LIGHT MODE
+**********************/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1c2746;
+    --text-color: #fff;
+  }
+
+  a {
+    color: var(--color-yellow);
+  }
+
+}
+
 
 /**********************
 * Page View Transition
