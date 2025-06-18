@@ -131,11 +131,13 @@ menu {
     > img.logo {
       height: 2em;
       vertical-align: middle;
+      width: auto;
     }
 
     > img.logoTitle {
       max-width: 50vw;
       width: 400px;
+      height: auto;
     }
 
     @media (max-width: 1024px) {
