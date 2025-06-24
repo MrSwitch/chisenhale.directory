@@ -3,17 +3,23 @@
 }
 
 :root {
+  color-scheme: light dark;
   --color-white: #fff;
   --color-navy: #1c2746;
   --color-yellow: #fdc608;
   --page-width: 1024px;
-  --bg-color: var(--color-white);
-  --text-color: var(--color-navy);
+  --bg-color: light-dark(var(--color-white), var(--color-navy));
+}
 
-  color: var(--text-color);
+html {
+  color: light-dark(var(--color-navy), var(--color-white));
   background-color: var(--bg-color);
   font-size: 16px;
   font-weight: 300;
+}
+
+a {
+  color: light-dark(var(--color-navy), var(--color-yellow));
 }
 
 svg {
@@ -282,22 +288,6 @@ body > footer {
   & a {
     color: var(--color-yellow);
   }
-}
-
-/**********************
-* DARK/LIGHT MODE
-**********************/
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #1c2746;
-    --text-color: #fff;
-  }
-
-  a {
-    color: var(--color-yellow);
-  }
-
 }
 
 
