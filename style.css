@@ -97,7 +97,6 @@ menu {
   
         .isHomePage & {
           max-height: none;
-          width: -webkit-fill-available;
           max-width: min(calc(var(--page-width) / 2), 80vw);
         }
       }
