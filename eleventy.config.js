@@ -3,6 +3,9 @@ import postcss from 'postcss';
 import postcssImport from 'postcss-import';
 import postcssMediaMinmax from 'postcss-media-minmax';
 import postcssNested from 'postcss-nested';
+import postcssCssVariables from 'postcss-css-variables';
+import postcssLightDarkFunction from '@csstools/postcss-light-dark-function';
+
 
 export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
@@ -29,7 +32,9 @@ export default function (eleventyConfig) {
         let output = await postcss([
           postcssImport,
           postcssNested,
+          postcssCssVariables,
           postcssMediaMinmax,
+          postcssLightDarkFunction,
         ]).process(content, {
           from: path,
         });

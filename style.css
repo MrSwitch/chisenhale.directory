@@ -100,7 +100,7 @@ menu {
     background-color: color-mix(in srgb, var(--bg-color), transparent 25%);
     bottom: 0px;
     position: absolute;
-    left: calc(100% / 2 - var(--page-width) / 2);
+    left: calc((100% / 2) - (var(--page-width) / 2));
 
     > img.logo {
       height: 2em;
