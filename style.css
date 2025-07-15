@@ -69,38 +69,7 @@ menu {
     object-fit: cover;
   }
 
-  /* text-shadow: 0.1em 0.1em #1116; */
-
   > nav {
-
-    @media (orientation: landscape) and (max-height: 500px) {
-      /* text-align: right; */
-    }
-
-    > a#chisenhaleLogo {
-      display: inline-block;
-      vertical-align: -webkit-baseline-middle;
-      padding-right: 20px;
-      view-transition-name: chisenhaleLogo;
-      position: relative;
-
-      .isHomePage & {
-        position: absolute;
-        top: 100px;
-      }
-
-      img {
-        max-width: 80vw;
-        max-height: 3em;
-        width: auto;
-        height: auto;
-  
-        .isHomePage & {
-          max-height: none;
-          max-width: min(calc(var(--page-width) / 2), 80vw);
-        }
-      }
-    }
 
     > ul {
         margin: 0;
@@ -145,7 +114,7 @@ menu {
       height: auto;
     }
 
-    @media (max-width: 1024px) {
+    @media (width <= 1024px) {
       & {
         left: 0;
       }
@@ -153,6 +122,33 @@ menu {
   }
 }
 
+/**********************
+ * HEADER LOGO, can't be within the `body >`
+ **********************/
+header > nav > a#chisenhaleLogo {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+  padding-right: 20px;
+  view-transition-name: chisenhaleLogo;
+  position: relative;
+
+  body.isHomePage & {
+    position: absolute;
+    top: 100px;
+  }
+
+  img {
+    max-width: 80vw;
+    max-height: 3em;
+    width: auto;
+    height: auto;
+
+    body.isHomePage & {
+      max-height: none;
+      max-width: min(calc(var(--page-width) / 2), 80vw);
+    }
+  }
+}
 /**********************
  * Main Content
  **********************/
@@ -284,7 +280,7 @@ body > footer {
   box-shadow: inset 0 10px 10px black;
   filter: grayscale(80%);
 
-  & a {
+  a {
     color: var(--color-yellow);
   }
 }
