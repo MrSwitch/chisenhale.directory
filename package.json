@@ -12,6 +12,10 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^6.0.4"
+    "@11ty/eleventy-img": "^6.0.4",
+    "postcss": "^8.5.6",
+    "postcss-import": "^16.1.1",
+    "postcss-media-minmax": "^5.0.0",
+    "postcss-nested": "^7.0.2"
   }
 }
