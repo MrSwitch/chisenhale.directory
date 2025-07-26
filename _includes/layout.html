@@ -19,6 +19,8 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
       content="{{ strapline | default: 'Supporting Chisenhale School' }}"
     />
     <meta property="og:site_name" content="Little Black Book" />
+    <meta name="theme-color" content="#1c2746" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="white" media="(prefers-color-scheme: light)" />
     <link rel="expect" blocking="render" href="#sponsorLogo" />
     <link rel="expect" blocking="render" href="#chisenhaleLogoImg" />
     <link rel="expect" blocking="render" href="#heroImage" />
