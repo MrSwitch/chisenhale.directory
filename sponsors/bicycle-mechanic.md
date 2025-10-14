@@ -1,6 +1,5 @@
 ---
 title: An example bike mechanic
-heroImg: https://romanroadlondon.com/wp-content/uploads/2024/09/roman-bikes-shop-roman-road-2.jpg
 location: Roman Bikes, 437 Roman Road, London R3 5LX
 tier: 2
 ---
