@@ -1,7 +1,7 @@
 ---
 title: Stuhl Upholstery
-heroImg: /assets/stuhl_upholstery.webp
-logoTitle: /assets/stuhl_upholstery_logo.webp
+heroImg: /assets/stuhl_upholstery.jpg
+logoTitle: /assets/stuhl_upholstery_logo.png
 ---
 
 At Stuhl Upholstery, we are passionate about creating beautiful, high-quality
