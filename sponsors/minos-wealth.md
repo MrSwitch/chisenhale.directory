@@ -1,7 +1,7 @@
 ---
 title: Minos Wealth
 heroImg: /assets/Minos_wealth_header.jpg
-strapline: Chartered Financial Planner & Principal
+strapline: Help with money, pensions & investment
 logo: /assets/minos-wealth-logo.png
 ---
 
