@@ -1,6 +1,7 @@
 ---
 title: Bard Books
 heroImg: /assets/bard-books.webp
+strapline: Local independent book shop
 logoTitle: /assets/bard-books-logo.webp
 location: 341-343 Roman Rd, Bow, London E3 5QR
 ---
