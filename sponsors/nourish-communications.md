@@ -2,7 +2,7 @@
 title: Nourish Communications
 heroImg: /assets/nourish_header.svg
 logoTitle: /assets/nourish-logo.png
-strapline: Branding and communications support for small business owners 
+strapline: Thoughtful marketing for meaningful brands 
 ---
 
 At Nourish Communications, I help small business owners articulate themselves with clear and concise wording and web design so they can attract their ideal clients and better sell their services, themselves and their vision. It’s a fundamental part of building a brand, and together with my business partner we can take care of all your messaging and visual identity. 
