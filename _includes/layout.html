@@ -51,7 +51,7 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
       </nav>
       {% if title %}
       <h1 class="heroTitle" style="view-transition-name: heading-{{ index }};">
-        {% if logoTitle %}<img class="logoTitle" src="{{ logoTitle }}" alt="{{ title }}" />{% else %}{% if logo %}<img id="sponsorLogo" class="logo" src="{{ logo }}" alt="{{ title }}" />{% endif %}{{ title }}{% endif %}
+        {% if logoTitle %}<img class="logoTitle {% if logoInvert %}logoInvert{% endif %}" src="{{ logoTitle }}" alt="{{ title }}" />{% else %}{% if logo %}<img id="sponsorLogo" class="logo" src="{{ logo }}" alt="{{ title }}" />{% endif %}{{ title }}{% endif %}
       </h1>
       {% endif %}
     </header>
