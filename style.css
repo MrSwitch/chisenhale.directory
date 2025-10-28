@@ -118,6 +118,13 @@ menu {
       aspect-ratio: auto;
     }
 
+
+    @media (prefers-color-scheme: dark) {
+      & > img.logoInvert {
+        filter: invert(1) brightness(2);
+      }
+    }
+
     @media (width <= 1024px) {
       & {
         left: 0;

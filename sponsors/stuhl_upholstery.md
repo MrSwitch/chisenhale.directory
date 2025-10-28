@@ -2,6 +2,8 @@
 title: Stuhl Upholstery
 heroImg: /assets/stuhl_upholstery.jpg
 logoTitle: /assets/stuhl_upholstery_logo.png
+logoInvert: true # Apply CSS filter to invert the image
+location: Sit Collective 374 Grove Green Road London E11 4AP
 ---
 
 At Stuhl Upholstery, we are passionate about creating beautiful, high-quality
@@ -23,4 +25,6 @@ Get in touch and let’s hear about your project.  We can do home visits and
 estimates without obligation to commit.
 
 - W: [https://www.stuhlupholstery.com/](https://www.stuhlupholstery.com/)
+- E: {% obfusicate "stuhlupholstery@gmail.com" %}
+- M: {% obfusicate "07753166981" %}
 - IG: [https://www.instagram.com/stuhl_upholstery/](https://www.instagram.com/stuhl_upholstery/)
