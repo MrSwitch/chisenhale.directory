@@ -2,7 +2,6 @@
 title: E3 Creative Glass
 heroImg: /assets/e3-creative-glass.jpeg
 strapline: Get creative with fused glass
-logoTitle: /assets/e3-creative-glass-logo.jpg
 location: Chisenhale Art Place, Chisenhale Road, E3 5QZ
 ---
 
