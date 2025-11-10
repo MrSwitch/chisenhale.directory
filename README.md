@@ -1,6 +1,6 @@
 # Readme
 
-Hello, welcome to the code base for [//chisenhale.directory](https://) website.
+Hello, welcome to the code base for [//chisenhale.directory](https://chisenhale.directory) website.
 
 > [!CAUTION]
 > First things first: Any changes made to the `main` branch will trigger a rebuild and all being well will deploy straight to the website, warts and all!
