@@ -16,4 +16,4 @@ Contact us for a free introductory call, with no obligation to proceed.
 - T: {% obfuscate "020 3858 3922" %}
 - W: [Cunningham Legal](https://www.cunninghamlegal.co.uk/)
 - E: {% obfuscate "amy@cunninghamlegal.co.uk" %}
-- LinkedIn: [Amy Cunningham]([https://www.linkedin.com/in/amy-cunningham-4853a317/])
+- LinkedIn: [Amy Cunningham](https://www.linkedin.com/in/amy-cunningham-4853a317/)
