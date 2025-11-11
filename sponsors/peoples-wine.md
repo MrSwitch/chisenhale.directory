@@ -15,7 +15,7 @@ It offers a warm, inclusive atmosphere, wine by the glass or bottle, and a menu 
 
 Our staff are knowledgeable and super friendly, bringing good vibes to the Roman.
 
-- W: [https://www.peopleswine.co.uk/](https://www.peopleswine.co.uk/)
+- T: {% obfusicate "0208 980 5528" %}
+- W: [People's Wine](https://www.peopleswine.co.uk/)
 - E: {% obfusicate "hello@peopleswine.co.uk" %}
-- M: {% obfusicate "0208 980 5528" %}
-- IG: [https://www.instagram.com/peopleswineromanroad/](https://www.instagram.com/peopleswineromanroad/)
+- Insta: [People's Wine Roman Road](https://www.instagram.com/peopleswineromanroad/)
