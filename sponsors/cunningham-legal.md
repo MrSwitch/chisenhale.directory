@@ -1,6 +1,6 @@
 ---
 title: Cunningham Legal
-heroImg: /assets/cunningham-legal.png
+heroImg: /assets/cunningham-legal-2.png
 strapline: First class employment law advice
 logoTitle: /assets/cunningham-legal-logo.png
 ---
