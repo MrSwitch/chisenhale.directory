@@ -13,7 +13,7 @@ Specialising in advising start-ups, SMEs and individuals, the team pride themsel
 
 Contact us for a free introductory call, with no obligation to proceed. 
 
-- T: {% obfusicate "020 3858 3922" %}
+- T: {% obfuscate "020 3858 3922" %}
 - W: [Cunningham Legal](https://www.cunninghamlegal.co.uk/)
-- E: {% obfusicate "amy@cunninghamlegal.co.uk" %}
+- E: {% obfuscate "amy@cunninghamlegal.co.uk" %}
 - LinkedIn: [Amy Cunningham]([https://www.linkedin.com/in/amy-cunningham-4853a317/])

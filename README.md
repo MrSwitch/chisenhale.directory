@@ -45,7 +45,7 @@ You can upload media (images, videos, etc..) in the `/assets` directory. And ref
 
 ## Obfusicating emails
 
-Use `{% obfusicate "email@example.com" %}` will hopefully make it harder for screen readers to scrape emails and spam the receipient.
+Use `{% obfuscate"email@example.com" %}` will hopefully make it harder for screen readers to scrape emails and spam the receipient.
 
 
 # Need Help? 🙋‍♂️
