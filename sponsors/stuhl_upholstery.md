@@ -1,6 +1,7 @@
 ---
 title: Stuhl Upholstery
 heroImg: /assets/stuhl_upholstery.jpg
+strapline: Upholstery & custom soft furnishings
 logoTitle: /assets/stuhl_upholstery_logo.png
 logoInvert: true # Apply CSS filter to invert the image
 location: Sit Collective 374 Grove Green Road London E11 4AP
