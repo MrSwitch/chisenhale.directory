@@ -43,9 +43,9 @@ my-great-company.md   // ✅ Perfect!
 
 You can upload media (images, videos, etc..) in the `/assets` directory. And reference it in your document with what's called an absolute path, i.e. starts with `/assets/my-logo.png`. Make sure any files you put in there are small.
 
-## Obfusicating emails
+## Obfuscating emails
 
-Use `{% obfuscate"email@example.com" %}` will hopefully make it harder for screen readers to scrape emails and spam the receipient.
+Use `{% obfuscate "email@example.com" %}` will hopefully make it harder for screen readers to scrape emails and spam the recipient.
 
 
 # Need Help? 🙋‍♂️
