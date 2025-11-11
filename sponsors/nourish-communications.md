@@ -12,7 +12,7 @@ If you’re struggling to communicate your services or feeling overwhelmed by th
 Want to supercharge your business in just 10 minutes? I’ve got a free workshop for you that’ll do just that: [Sign up here](https://powerhousepositioning.com/supercharge-your-business-in-10-minutes)
 
 - T: 07989 854274
-- E: {% obfusicate "rebecca@nourishyourbrand.com" %}
+- E: {% obfuscate "rebecca@nourishyourbrand.com" %}
 - W: [Nourish Your Brand](https://www.nourishyourbrand.com)
 - LI: [Nourish on LinkedIn](https://www.linkedin.com/in/rebecca-miles-writer/)
 - Insta: [Nourish on Instagram](https://www.instagram.com/powerhousepositioning/)
