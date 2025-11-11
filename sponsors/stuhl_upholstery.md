@@ -26,6 +26,6 @@ Get in touch and let’s hear about your project.  We can do home visits and
 estimates without obligation to commit.
 
 - W: [https://www.stuhlupholstery.com/](https://www.stuhlupholstery.com/)
-- E: {% obfusicate "stuhlupholstery@gmail.com" %}
-- M: {% obfusicate "07753166981" %}
+- E: {% obfuscate "stuhlupholstery@gmail.com" %}
+- M: {% obfuscate "07753166981" %}
 - IG: [https://www.instagram.com/stuhl_upholstery/](https://www.instagram.com/stuhl_upholstery/)

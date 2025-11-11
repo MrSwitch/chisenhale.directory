@@ -1,12 +1,19 @@
 ---
-title: Bard Books
-heroImg: /assets/bard-books.webp
-strapline: Local independent book shop
-logoTitle: /assets/bard-books-logo.webp
-location: 341-343 Roman Rd, Bow, London E3 5QR
+title: Cunningham Legal
+heroImg: /assets/cunningham-legal-2.png
+strapline: First class employment law advice
+logoTitle: /assets/cunningham-legal-logo.png
 ---
 
-BÀRD BOOKS is more than just a bookshop. Alongside the carefully curated bookshelves, it’s a place you can pop in for a coffee or pastry; somewhere to meet friends, make friends, do some work, read a book, write a book, listen to authors, hear some music – just escape. Bookshops are third spaces; “much-loved local haunts that are neither home nor the workplace, but which we rely on for a sense of community and everyday socialising… the lifeblood of our high streets and fundamental to our mental health.” [ROMAN ROAD LDN]. In the evening, the lights dim, and books provide the backdrop for a glass of something deliciously chilled and one of many curated events: quiz, comedy, poetry, books.
+Cunningham Legal is a small team of highly experienced employment lawyers, focused on delivering the best possible outcome for you, on time and on budget. 
 
-- W: [https://www.wearebardbooks.co.uk/](https://www.wearebardbooks.co.uk/)
-- IG: [https://www.instagram.com/wearebardbooks/](https://www.instagram.com/wearebardbooks/)
+Founded by Amy Cunningham in 2015 and with offices in the City of London and Canary Wharf, the Cunningham Legal team of specialist employment lawyers have a wealth of experience advising on the full range of employment law and HR matters. 
+
+Specialising in advising start-ups, SMEs and individuals, the team pride themselves on helping you achieve your objectives as quickly and painlessly as possible. 
+
+Contact us for a free introductory call, with no obligation to proceed. 
+
+- T: {% obfuscate "020 3858 3922" %}
+- W: [Cunningham Legal](https://www.cunninghamlegal.co.uk/)
+- E: {% obfuscate "amy@cunninghamlegal.co.uk" %}
+- LinkedIn: [Amy Cunningham]([https://www.linkedin.com/in/amy-cunningham-4853a317/])
