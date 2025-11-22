@@ -72,7 +72,13 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
     <main>{{ content }}</main>
 
     <aside>
+
+      {% if page.url contains "/sponsors/" %}
+      <p>If you contact {{ title | default: "this business" }}, please mention you found them on the Chisenhale Little Black Book - it really helps benefit the school when our sponsors know this is working</p>
+      {% endif %}
+
       <menu>
+
         {% if previousPost %}
         <li>
           Prev: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
@@ -82,6 +88,8 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
         {% endif %}
       </menu>
     </aside>
+
+
 
     <footer>
       <p>
