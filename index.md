@@ -4,6 +4,12 @@ layout: layout.html
 heroImg: /assets/chisenhale-hero.webp
 ---
 
+## Welcome to Chisenhale Primary School’s Little Black Book.
+
+Created by the school’s PTA, its aim is to both promote local businesses to our community and raise funds for the school.
+
+Want to be featured? Get in touch at {% obfuscate"chisenhalelbb@gmail.com" %}
+
 ## Sponsors
 
 <section>
