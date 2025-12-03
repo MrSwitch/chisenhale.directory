@@ -15,6 +15,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addTemplateFormats('css');
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("scripts");
   eleventyConfig.ignores.add("README.md");
 
   eleventyConfig.addShortcode("obfuscate", (content) => {
