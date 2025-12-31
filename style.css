@@ -22,17 +22,6 @@ a {
   color: light-dark(var(--color-navy), var(--color-yellow));
 }
 
-a[href^="http"]::after {
-  /** box with arrow pointing top-right */
-  content: "🔗";
-  border-radius: 1em;
-  padding: 0 0.5em;
-  background: #ddd;
-  margin-left: 0.2em;
-  font-size: 0.8em;
-  display: inline-block;
-}
-
 svg {
   max-width: 100%;
 }
