@@ -1,8 +1,8 @@
 ---
 title: triyoga
-heroImg: /assets/triyoga.webp
+heroImg: /assets/triyoga.jpg
 strapline: London's Leading Yoga Centre: Shoreditch Branch
-logoTitle: /assets/triyoga-logo.webp
+logoTitle: /assets/triyoga-logo.png
 location: Unit 2, 10 Cygnet Street, London, E1 6GW
 ---
 
