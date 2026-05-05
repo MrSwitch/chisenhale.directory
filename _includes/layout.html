@@ -17,7 +17,14 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
     <link rel="icon" href="/assets/icon.svg" type="image/svg">
     <title>{{ title | default: 'Little Black Book'}}</title>
     <meta name="description" content="{{ strapline | default: 'Supporting Chisenhale School' }}">
-    <meta property="og:image" content="{{ heroImg }}" />
+    <meta property="og:image" content="{% ogImage heroImg %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    {% if logoTitle %}
+    <meta property="og:logo" content="{{ logoTitle | absolute_url }}" />
+    {% elsif logo %}
+    <meta property="og:logo" content="{{ logo | absolute_url }}" />
+    {% endif %}
     <meta
       property="og:title"
       content="{{ title | default: 'Little Black Book' }}"

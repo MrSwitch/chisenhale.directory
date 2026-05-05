@@ -1,4 +1,5 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import Image from "@11ty/eleventy-img";
 import postcss from 'postcss';
 import postcssImport from 'postcss-import';
 import postcssMediaMinmax from 'postcss-media-minmax';
@@ -12,6 +13,31 @@ export default function (eleventyConfig) {
 		widths: ["1800"],
     formats: ["webp"],
   });
+  eleventyConfig.addShortcode("ogImage", async function(src) {
+    if (!src || src.startsWith('http')) {
+      return src || '';
+    }
+    let metadata = await Image(`.${src}`, {
+      widths: [1200],
+      formats: ["webp"],
+      outputDir: "./_site/img/",
+      urlPath: "https://chisenhale.directory/img/",
+      sharpOptions: {
+        resize: {
+          width: 1200,
+          height: 630,
+          fit: "cover",
+        },
+      },
+    });
+    return metadata.webp[0].url;
+  });
+
+  eleventyConfig.addFilter("absolute_url", (url) => {
+    console.log("Generating absolute URL for", url);
+    return new URL(url || "/", "https://chisenhale.directory").href;
+  });
+
   eleventyConfig.addTemplateFormats('css');
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("assets");
