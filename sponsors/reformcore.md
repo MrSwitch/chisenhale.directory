@@ -3,6 +3,7 @@ title: reformcore
 heroImg: /assets/reformcore.jpg
 strapline: Build Strength and Body Connection Through Pilates
 logoTitle: /assets/reformcore-logo.png
+logoInvert: true # Apply CSS filter to invert the logo in Dark Mode
 location: Unit 2, 10 Cygnet Street, London, E1 6GW
 ---
 
