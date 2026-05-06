@@ -3,6 +3,7 @@ title: triyoga
 heroImg: /assets/triyoga.jpg
 strapline: "London's Leading Yoga Centre: Shoreditch Branch"
 logoTitle: /assets/triyoga-logo.png
+logoInvert: true # Apply CSS filter to invert the logo in Dark Mode
 location: Unit 2, 10 Cygnet Street, London, E1 6GW
 ---
 
