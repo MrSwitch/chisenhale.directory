@@ -2,7 +2,7 @@
 title: Strings Club
 heroImg: /assets/strings_club.png
 strapline: 🎶Music, Creativity & Confidence with The Strings Club 💜
-logoTitle: /assets/strings_club_logo.jpeg
+logoTitle: /assets/strings_club_logo.avif
 location: Balham, Blackheath, Bow, Brockley, Clapton (new!), Crouch End, Dulwich, Ealing (new!), Fulham, Greenwich, Hackney, Hampstead, Islington, Kingston upon Thames, Nunhead, Richmond, Walthamstow and Wimbledon
 ---
 
