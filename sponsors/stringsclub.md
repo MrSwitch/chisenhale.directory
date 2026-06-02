@@ -14,5 +14,7 @@ Through our carefully designed activities, children develop:
 • Imagination, curiosity and independence
 • Focus, resilience and emotional wellbeing - all nurtured through music
 
+- T: 0121 296 9204
+- E: {% obfuscate"info@thestringsclub.org" %}
 - W: [https://www.thestringsclub.org/](https://www.thestringsclub.org/)
 - IG: [https://www.instagram.com/the_strings_club/](https://www.instagram.com/the_strings_club/)
