@@ -8,15 +8,14 @@ location: Unit 2, 10 Cygnet Street, London, E1 6GW
 ---
 
 
-:mega:.png Special Offer just for Chisenhale Little Black Book at Reformcore/Triyoga Shoreditch
-  :sparkles:.pngDue to popular demand, we’re extending the 50% off 3, 5, 10 and 20 packs offer! :sparkles:.png
+Special Offer just for Chisenhale Little Black Book at Reformcore/Triyoga Shoreditch
+Due to popular demand, we’re extending the 50% off 3, 5, 10 and 20 packs offer! 
 These credits can be used across all Common Bond brands: Reformcore, Triyoga, Boom Cycle, and Barrecore (Reformcore and Triyoga are in their Shoreditch building only)
 To redeem: download the Common Bond Wellness app, create an account, and enter the code below at checkout after selecting the pack of 3 or more credits of your choice! 
-:round_pushpin:.png Just by Shoreditch Overground station
-:woman_in_lotus_position:.png:man_in_lotus_position:.png
+Just by Shoreditch Overground station
 Code: SHORECHISE50
-:hourglass_flowing_sand:.png Valid until the end of AUGUST 2026
-Enjoy! :muscle::skin-tone-3:.png:raised_hands::skin-tone-3:.png
+Valid until the end of AUGUST 2026
+Enjoy! 
 
 Reformcore is a dynamic reformer Pilates workout designed to build strength, control and total-body connection. Every class combines slow, intentional movement with high-intensity sequences to challenge muscles deeply and deliver real results. From foundation-led sessions to powerful, sweat-driven formats, Reformcore meets you where you are and pushes you further. Expect expert-led classes, a motivating studio environment and a workout that leaves you feeling stronger, longer and more in control of your body.
 - W: [https://www.reformcore.com/](https://www.reformcore.com/)
