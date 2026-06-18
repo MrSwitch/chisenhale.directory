@@ -16,7 +16,7 @@ Want to be featured? Get in touch at {% obfuscate"chisenhalelbb@gmail.com" %}
 {% for item in collections.sponsors %}
 <a href="{{ item.url }}">
 <article>
-    <img src="{{item.data.heroImg}}" alt=""/>
+    <img src="{{item.data.heroImg}}" alt="" style="view-transition-name: hero-image-{{ item.fileSlug }};"/>
     <h1 style="view-transition-name: heading-{{ forloop.index }};">{{ item.data.title }}</h1> 
     {% if item.data.strapline %}<p>{{ item.data.strapline }}</p> {% endif %}
 </article>

@@ -50,7 +50,7 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
   </head>
   <body {% if page.url == "/" %} class="isHomePage"{% endif %}>
     <header>
-      <img id="heroImage" class="heroImage" src="{{ heroImg }}" alt="" />
+      <img id="heroImage" class="heroImage" src="{{ heroImg }}" alt="" {% if page.url contains '/sponsors/' %}style="view-transition-name: hero-image-{{ page.fileSlug }};"{% endif %} />
       <nav>
         <a id="chisenhaleLogo" href="/"
           ><img
