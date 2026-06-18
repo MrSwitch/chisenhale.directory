@@ -2,7 +2,7 @@
 title: Move Studio
 heroImg: /assets/move-studio.webp
 strapline: Your friendly local studio
-logoTitle: /assets/move-studio-logo.webp
+logoTitle: /assets/move-studio-logo.png
 location: move, Dane Place, London E3 5EJ
 ---
 
