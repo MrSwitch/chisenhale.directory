@@ -58,11 +58,9 @@ body > aside {
   background-size: cover;
   min-height: 50vh;
   position: relative;
-  background-image: linear-gradient(to bottom, var(--bg-color), transparent);
   height: 50vh;
 
   > img.heroImage {
-    z-index: -1;
     position: absolute;
     inset: 0;
     width: 100%;
@@ -71,6 +69,10 @@ body > aside {
   }
 
   > nav {
+
+    background-image: linear-gradient(to bottom, var(--bg-color), transparent);
+    height: 100%;
+    view-transition-name: nav;
 
     > ul {
         margin: 0;
@@ -305,6 +307,30 @@ body > footer {
 @media screen and (prefers-reduced-motion: no-preference) {
   @view-transition {
     navigation: auto;
+  }
+
+  /* Keep navigation snapshots above shared hero-image snapshots during transitions. */
+  ::view-transition-group(*) {
+    z-index: 1;
+  }
+
+  ::view-transition-group(nav),
+  ::view-transition-old(nav),
+  ::view-transition-new(nav) {
+    z-index: 2;
+  }
+
+  ::view-transition-group(chisenhaleLogo),
+  ::view-transition-old(chisenhaleLogo),
+  ::view-transition-new(chisenhaleLogo) {
+    z-index: 3;
+  }
+
+  /* Prevent cross-fade flicker on the logo while it moves between layouts. */
+  ::view-transition-old(chisenhaleLogo),
+  ::view-transition-new(chisenhaleLogo) {
+    animation: none;
+    mix-blend-mode: normal;
   }
 }
 
