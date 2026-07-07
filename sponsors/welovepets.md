@@ -1,6 +1,6 @@
 ---
 title: We Love Pets Hackney
-heroImg: /assets/we-love-pets.webp
+heroImg: /assets/we-love-pets2.webp
 strapline: Award-winning dog walking, pet sitting and home boarding in Hackney
 logoTitle: /assets/we-love-pets-logo.webp
 ---
