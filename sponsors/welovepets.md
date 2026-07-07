@@ -11,5 +11,7 @@ We offer professional dog walking, doggy daycare and home boarding, pet sitting,
 
 As genuine animal lovers and pet owners ourselves, the We Love Pets Hackney team understands how important it is to find someone you can fully trust. So whether you need a regular walk to help you while you work or someone to look after your pets when you’re away, we’re here to help - get in touch!
 
+SPECIAL OFFER! Get the first walk for free for dog walking and/or get a 5% on all boarding/house sitting and pet visits when you mention the LBB (for new clients and first block booking only). 
+
 - W: [welovepets.care/branch/hackney](https://welovepets.care/branch/hackney/)
 - T: 07789 635594
