@@ -1,8 +1,8 @@
 ---
 title: Cow Skateshop
-heroImg: /assets/cow-skateshop.md
+heroImg: /assets/cow-skateshop.png
 strapline: Local independent skate shop
-logoTitle: /assets/cow-skateshop-logo.md
+logoTitle: /assets/cow-skateshop-logo.png
 location: 361A Roman Rd, Bow, London E3 5QR
 ---
 
