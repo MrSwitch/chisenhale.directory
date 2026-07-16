@@ -1,5 +1,5 @@
 ---
-title: Your Best Life
+title: Josh Peck
 heroImg: /assets/your-best-life.png
 strapline: Career Change Coach
 logoTitle: /assets/your-best-life-logo.png
