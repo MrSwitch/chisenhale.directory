@@ -1,8 +1,8 @@
 ---
 title: Your Best Life
-heroImg: /assets/your-best-life.webp
+heroImg: /assets/your-best-life.png
 strapline: Career Change Coach
-logoTitle: /assets/your-best-life-logo.webp
+logoTitle: /assets/your-best-life-logo.png
 
 ---
 
