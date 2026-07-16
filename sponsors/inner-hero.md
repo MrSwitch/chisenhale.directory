@@ -16,9 +16,5 @@ Wondering where to start? Visit my website to book a free relaxed discovery call
 
  T: 07834 612 086
  E: innerherocoach@gmail.com
- W:  Inner Hero Coaching
- LI:  Joe Ruddock on LinkedIn
-
-
 - W: [https://www.innerherocoaching.co.uk/](https://www.innerherocoaching.co.uk/)
 - LI: [https://www.linkedin.com/in/joeruddock/](https://www.linkedin.com/in/joeruddock/)
