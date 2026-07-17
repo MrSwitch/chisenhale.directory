@@ -58,25 +58,40 @@ body > aside {
   background-size: cover;
   min-height: 50vh;
   position: relative;
-  background-image: linear-gradient(to bottom, var(--bg-color), transparent);
   height: 50vh;
 
-  > img.heroImage {
-    z-index: -1;
+  > img.heroImage,
+  > picture > img.heroImage {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 80px);
+    top:80px;
+    /* transform: translateZ(0); Triggers GPU layer promotion */
+  }
+
+  > img.heroImage,
+  > picture > img.heroImage {
     object-fit: cover;
   }
 
   > nav {
 
-    > ul {
+    /* background-image: linear-gradient(to bottom, var(--bg-color), transparent); */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+
+    > ul.navLinks {
+        view-transition-name: nav;
         margin: 0;
         list-style: none;
         padding-inline-start: 0;
-        display: inline-block;
+      display: flex;
+      align-items: center;
+        white-space: nowrap;
         vertical-align: -webkit-baseline-middle;
 
         > li {
@@ -93,6 +108,54 @@ body > aside {
           }
         }
       }
+
+    > details.navMenu {
+      margin-left: auto;
+      position: relative;
+
+      > summary {
+        list-style: none;
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      > ul {
+        position: absolute;
+        top: calc(100% + 0.4rem);
+        right: 0;
+        margin: 0;
+        padding: 0.6rem 0.9rem;
+        list-style: none;
+        background-color: color-mix(in srgb, var(--bg-color), transparent 10%);
+        border: 1px solid color-mix(in srgb, var(--color-navy), transparent 65%);
+        border-radius: 0.35rem;
+        min-width: 9rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+
+        > li {
+          margin: 0;
+          padding: 0;
+        }
+
+        > li + li {
+          margin-top: 0.3rem;
+        }
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
     }
 
   > h1 {
@@ -102,15 +165,17 @@ body > aside {
     background-color: color-mix(in srgb, var(--bg-color), transparent 25%);
     bottom: 0px;
     position: absolute;
+    z-index: 1;
     left: calc((100% / 2) - (var(--page-width) / 2));
 
-    > img.logo {
+    > picture > img.logo {
       height: 2em;
       vertical-align: middle;
       width: auto;
     }
 
-    > img.logoTitle {
+    > picture,
+    > picture > img.logoTitle {
       max-width: 50vw; /* fallback */
       max-width: min(50vw, 400px);
       max-height: 20vh;
@@ -121,7 +186,7 @@ body > aside {
 
 
     @media (prefers-color-scheme: dark) {
-      & > img.logoInvert {
+      & > picture > img.logoInvert {
         filter: invert(1) brightness(2);
       }
     }
@@ -147,6 +212,9 @@ header > nav > a#chisenhaleLogo {
   body.isHomePage & {
     position: absolute;
     top: 100px;
+    padding: 20px;
+    padding-right: 20px;
+    background-color:  color-mix(in srgb, var(--bg-color), transparent 40%);;
   }
 
   img {
@@ -160,6 +228,24 @@ header > nav > a#chisenhaleLogo {
       max-width: min(calc(var(--page-width) / 2), 80vw);
     }
   }
+}
+
+/* Navigation mode switching: default to compact menu, expand links on homepage. */
+body > header > nav > ul.navLinks {
+  display: none;
+}
+
+body > header > nav > details.navMenu {
+  display: inline-flex;
+  align-items: center;
+}
+
+body.isHomePage > header > nav > ul.navLinks {
+  display: flex;
+}
+
+body.isHomePage > header > nav > details.navMenu {
+  display: none;
 }
 /**********************
  * Main Content
@@ -222,13 +308,15 @@ main {
         transform: translateY(-5px);
       }
 
-      > img {
+      > picture,
+      > picture > img {
         aspect-ratio: 16 / 9;
         width: 100%;
         height: auto;
         object-fit: cover;
         padding: 0;
         z-index: -1;
+        /* transform: translateZ(0); Triggers GPU layer promotion */
       }
       > * {
         padding: 0 1rem;
@@ -306,8 +394,51 @@ body > footer {
   @view-transition {
     navigation: auto;
   }
+
+  /* Keep navigation snapshots above shared hero-image snapshots during transitions. */
+  ::view-transition-group(*) {
+    z-index: 1;
+  }
+
+  ::view-transition-group(nav),
+  ::view-transition-old(nav),
+  ::view-transition-new(nav) {
+    z-index: 2;
+  }
+
+  ::view-transition-group(chisenhaleLogo),
+  ::view-transition-old(chisenhaleLogo),
+  ::view-transition-new(chisenhaleLogo) {
+    z-index: 3;
+  }
+
+  /* Ensure heading snapshots stay above hero-image snapshots. */
+  ::view-transition-group(*.heroImage),
+  ::view-transition-old(*.heroImage),
+  ::view-transition-new(*.heroImage) {
+    z-index: 1;
+  }
+
+  ::view-transition-group(*.heading),
+  ::view-transition-old(*.heading),
+  ::view-transition-new(*.heading) {
+    z-index: 4;
+  }
+
+  /* Keep only one logo snapshot visible to avoid old/new ghosting while moving. */
+  ::view-transition-old(chisenhaleLogo) {
+    animation: none;
+    opacity: 0;
+    mix-blend-mode: normal;
+  }
+
+  ::view-transition-new(chisenhaleLogo) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
 }
 
+/* 
 main {
   view-transition-name: page;
 }
@@ -318,26 +449,5 @@ main {
 
 ::view-transition-new(page) {
   animation: slide-in 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-}
+} */
 
-@keyframes slide-out {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(calc(50% * var(--direction, 1)));
-  }
-}
-
-@keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateX(calc(-50% * var(--direction, 1)));
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
