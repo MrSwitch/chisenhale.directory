@@ -10,8 +10,14 @@ import postcssLightDarkFunction from '@csstools/postcss-light-dark-function';
 
 export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-		widths: ["1800"],
-    formats: ["webp"],
+		widths: [400, 800, 1800, "auto"],
+    formats: ["avif", "webp"],
+    // Set global sizes attribute for responsive scaling
+    defaultAttributes: {
+      sizes: "(max-width: 1200px) 100vw, 1200px",
+      loading: "lazy",
+      decoding: "async",
+    },
   });
   eleventyConfig.addShortcode("ogImage", async function(src) {
     if (!src || src.startsWith('http')) {

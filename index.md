@@ -16,8 +16,8 @@ Want to be featured? Get in touch at {% obfuscate"chisenhalelbb@gmail.com" %}
 {% for item in collections.sponsors %}
 <a href="{{ item.url }}">
 <article>
-    <img src="{{item.data.heroImg}}" alt="" style="view-transition-name: hero-image-{{ item.fileSlug }};"/>
-    <h1 style="view-transition-name: heading-{{ item.fileSlug }};">{{ item.data.title }}</h1> 
+    <img src="{{item.data.heroImg}}" alt="" style="view-transition-name: hero-image-{{ item.fileSlug }}; view-transition-class: heroImage;"/>
+    <h1 style="view-transition-name: heading-{{ item.fileSlug }}; view-transition-class: heading;">{{ item.data.title }}</h1> 
     {% if item.data.strapline %}<p>{{ item.data.strapline }}</p> {% endif %}
 </article>
 </a>

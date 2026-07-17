@@ -50,7 +50,7 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
   </head>
   <body {% if page.url == "/" %} class="isHomePage"{% endif %}>
     <header>
-      <img id="heroImage" class="heroImage" src="{{ heroImg }}" alt="" style="view-transition-name: hero-image-{{ page.fileSlug }};" />
+      <img id="heroImage" class="heroImage" src="{{ heroImg }}" alt="" style="view-transition-name: hero-image-{{ page.fileSlug }}; view-transition-class: heroImage;" />
       <nav>
         <a id="chisenhaleLogo" href="/"
           ><img
@@ -59,13 +59,20 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
             alt="Chisenhale Little Black Books Logo"
             eleventy:ignore
         /></a>
-        <ul>
+        <ul class="navLinks">
           <li><a href="/">Home</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
+        <details class="navMenu">
+          <summary aria-label="Open navigation menu">Menu</summary>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </details>
       </nav>
       {% if title %}
-      <h1 class="heroTitle" style="view-transition-name: heading-{{ page.fileSlug }};">
+      <h1 class="heroTitle" style="view-transition-name: heading-{{ page.fileSlug }}; view-transition-class: heading;">
         {% if logoTitle %}<img class="logoTitle {% if logoInvert %}logoInvert{% endif %}" src="{{ logoTitle }}" alt="{{ title }}" />{% else %}{% if logo %}<img id="sponsorLogo" class="logo" src="{{ logo }}" alt="{{ title }}" />{% endif %}{{ title }}{% endif %}
       </h1>
       {% endif %}
@@ -96,10 +103,10 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
 
         {% if previousPost %}
         <li>
-          Prev: <a href="{{ previousPost.url }}"  style="view-transition-name: heading-{{ previousPost.fileSlug }};">{{ previousPost.data.title }}</a>
+          Prev: <a href="{{ previousPost.url }}"  style="view-transition-name: heading-{{ previousPost.fileSlug }}; view-transition-class: heading;">{{ previousPost.data.title }}</a>
         </li>
         {% endif %} {% if nextPost %}
-        <li>Next: <a href="{{ nextPost.url }}"  style="view-transition-name: heading-{{ nextPost.fileSlug }};">{{ nextPost.data.title }}</a></li>
+        <li>Next: <a href="{{ nextPost.url }}"  style="view-transition-name: heading-{{ nextPost.fileSlug }}; view-transition-class: heading;">{{ nextPost.data.title }}</a></li>
         {% endif %}
       </menu>
     </aside>
