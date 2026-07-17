@@ -1,5 +1,8 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import Image from "@11ty/eleventy-img";
+import crypto from "node:crypto";
+import fs from "node:fs/promises";
+import path from "node:path";
 import postcss from 'postcss';
 import postcssImport from 'postcss-import';
 import postcssMediaMinmax from 'postcss-media-minmax';
@@ -9,6 +12,32 @@ import postcssLightDarkFunction from '@csstools/postcss-light-dark-function';
 
 
 export default function (eleventyConfig) {
+  const assetVersionCache = new Map();
+
+  eleventyConfig.addFilter("asset", async (assetPath) => {
+    if (!assetPath || assetPath.startsWith("http://") || assetPath.startsWith("https://")) {
+      return assetPath;
+    }
+
+    if (assetVersionCache.has(assetPath)) {
+      return assetVersionCache.get(assetPath);
+    }
+
+    const cleanPath = assetPath.split("?")[0];
+    const relativePath = cleanPath.replace(/^\//, "");
+    const fullPath = path.join(process.cwd(), relativePath);
+
+    try {
+      const fileContent = await fs.readFile(fullPath);
+      const hash = crypto.createHash("sha256").update(fileContent).digest("hex").slice(0, 10);
+      const versionedPath = `${assetPath}?v=${hash}`;
+      assetVersionCache.set(assetPath, versionedPath);
+      return versionedPath;
+    } catch {
+      return assetPath;
+    }
+  });
+
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		widths: [400, 800, 1800, "auto"],
     formats: ["avif", "webp"],
