@@ -1,8 +1,8 @@
 ---
-title: Discovery Children's Story Centre
-heroImg: /assets/discovery-centre.webp
+title: Discover Children's Story Centre
+heroImg: /assets/discover-centre.webp
 strapline: Play. Create. Discover.
-logoTitle: /assets/discovery-centre-logo.webp
+logoTitle: /assets/discover-centre-logo.webp
 location: 383-387 High Street, London E15 4QZ
 ---
 
