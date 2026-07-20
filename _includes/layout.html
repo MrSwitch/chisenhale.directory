@@ -1,6 +1,7 @@
 {% assign index = collections.sponsors | getCollectionItemIndex %} {% assign
 previousPost = collections.sponsors | getPreviousCollectionItem : page %} {%
 assign nextPost = collections.sponsors | getNextCollectionItem : page %}
+{% assign isSponsorPage = page.url contains "/sponsors/" %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,29 +49,30 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
     />
     <link rel="stylesheet" href="{{ '/style.css' | asset }}" />
   </head>
-  <body {% if page.url == "/" %} class="isHomePage"{% endif %}>
-    <header>
-      <img id="heroImage" class="heroImage" src="{{ heroImg }}" alt="" style="view-transition-name: hero-image-{{ page.fileSlug }}; view-transition-class: heroImage;" />
-      <nav>
-        <a id="chisenhaleLogo" href="/"
-          ><img
-            id="chisenhaleLogoImg"
-            src="/assets/logo.svg"
-            alt="Chisenhale Little Black Books Logo"
-            eleventy:ignore
-        /></a>
-        <ul class="navLinks">
+  <body {% if page.url == "/" %} class="isHomePage"{% endif %}{% if isSponsorPage %} data-sponsor-swipe="true"{% endif %}>
+    <nav>
+      <a id="chisenhaleLogo" href="/"
+        ><img
+          id="chisenhaleLogoImg"
+          src="/assets/logo.svg"
+          alt="Chisenhale Little Black Books Logo"
+          eleventy:ignore
+      /></a>
+      <ul class="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <details class="navMenu">
+        <summary aria-label="Open navigation menu">Menu</summary>
+        <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
-        <details class="navMenu">
-          <summary aria-label="Open navigation menu">Menu</summary>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </details>
-      </nav>
+      </details>
+    </nav>
+    {% if isSponsorPage %}<div class="swipeTrack"><div class="swipePanel">{% endif %}
+    <header>
+      <img id="heroImage" class="heroImage" src="{{ heroImg }}" alt="" style="view-transition-name: hero-image-{{ page.fileSlug }}; view-transition-class: heroImage;" />
       {% if title %}
       <h1 class="heroTitle" style="view-transition-name: heading-{{ page.fileSlug }}; view-transition-class: heading;">
         {% if logoTitle %}<img class="logoTitle {% if logoInvert %}logoInvert{% endif %}" src="{{ logoTitle }}" alt="{{ title }}" />{% else %}{% if logo %}<img id="sponsorLogo" class="logo" src="{{ logo }}" alt="{{ title }}" />{% endif %}{{ title }}{% endif %}
@@ -91,9 +93,9 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
       {% endif %}
     </menu>
 
-    <main>{{ content }}</main>
+  <main>{{ content }}</main>
 
-    <aside>
+  <aside>
 
       {% if page.url contains "/sponsors/" %}
       <p>If you contact {{ title | default: "this business" }}, please mention you found them on the Chisenhale Little Black Book - it really helps benefit the school when our sponsors know this is working</p>
@@ -103,14 +105,14 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
 
         {% if previousPost %}
         <li>
-          Prev: <a href="{{ previousPost.url }}"  style="view-transition-name: heading-{{ previousPost.fileSlug }}; view-transition-class: heading;">{{ previousPost.data.title }}</a>
+          Prev: <a href="{{ previousPost.url }}" data-swipe-nav="prev">{{ previousPost.data.title }}</a>
         </li>
         {% endif %} {% if nextPost %}
-        <li>Next: <a href="{{ nextPost.url }}"  style="view-transition-name: heading-{{ nextPost.fileSlug }}; view-transition-class: heading;">{{ nextPost.data.title }}</a></li>
+        <li>Next: <a href="{{ nextPost.url }}" data-swipe-nav="next">{{ nextPost.data.title }}</a></li>
         {% endif %}
       </menu>
     </aside>
-
+    {% if isSponsorPage %}</div></div>{% endif %}
 
 
     <footer>
@@ -118,5 +120,9 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
         Little Black Book <a href="/contact">About, Contact and Disclaimer</a>
       </p>
     </footer>
+
+    {% if isSponsorPage %}
+    <script type="module" src="{{ '/assets/sponsor-swipe.js' | asset }}"></script>
+    {% endif %}
   </body>
 </html>
