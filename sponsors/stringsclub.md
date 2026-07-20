@@ -47,7 +47,7 @@ The Strings Club is proud to be part of the Buy Women Built community and has in
 Discover why families across Bow choose The Strings Club year after year.
 
 Find out more and book online at www.thestringsclub.org.
-- T: 0121 296 9204
+- T: {% obfuscate "0121 296 9204" %}
 - E: {% obfuscate"info@thestringsclub.org" %}
 - W: [https://www.thestringsclub.org/](https://www.thestringsclub.org/)
 - IG: [https://www.instagram.com/the_strings_club/](https://www.instagram.com/the_strings_club/)

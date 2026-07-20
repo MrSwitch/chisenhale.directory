@@ -47,6 +47,7 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{ '/style.css' | asset }}" />
+    <script type="module" src="{{ '/assets/main.js' | asset }}"></script>
   </head>
   <body {% if page.url == "/" %} class="isHomePage"{% endif %}>
     <header>

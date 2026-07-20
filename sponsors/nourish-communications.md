@@ -11,8 +11,8 @@ If you’re struggling to communicate your services or feeling overwhelmed by th
 
 Wondering where to start? Sign up to my weekly newsletter, Words That Work Weekly - it helps small business owners get clear on their messaging so the right clients come calling: [Sign up here](https://nourishyourbrand.com/words-that-work-weekly)
 
-- T: 07989 854274
-- E: {% obfuscate"rebecca@nourishyourbrand.com" %}
+- T: {% obfuscate "07989 854274" %}
+- E: {% obfuscate "rebecca@nourishyourbrand.com" %}
 - W: [Nourish Your Brand](https://www.nourishyourbrand.com)
 - LI: [Nourish on LinkedIn](https://www.linkedin.com/in/rebecca-miles-writer/)
 - Insta: [Nourish on Instagram](https://www.instagram.com/becmileswrites/)

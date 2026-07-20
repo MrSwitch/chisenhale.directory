@@ -79,7 +79,8 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
 
   eleventyConfig.addShortcode("obfuscate", (content) => {
-    return `<script>document.write('${content.split('').join(`'+'`)}');</script>`;
+    const encoded = Buffer.from([...content].reverse().join("")).toString("base64");
+    return `<obfuscated-text data="${encoded}"></obfuscated-text>`;
   });
 
   eleventyConfig.addExtension('css', {
