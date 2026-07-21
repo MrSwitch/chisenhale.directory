@@ -41,32 +41,118 @@ body {
 
 main,
 header > h1,
-header > nav,
-body > menu,
-body > aside {
+:is(body, .swipePanel) > nav,
+:is(body, .swipePanel) > menu,
+:is(body, .swipePanel) > aside {
   margin: 0 auto 0;
   padding: 15px;
   max-width: var(--page-width);
 }
 
 /**********************
+ * Nav (page chrome: stays put while sponsor panels slide beneath it)
+ **********************/
+
+:is(body, .swipePanel) > nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 7; /* above the .isIncoming overlay (z-index 6) */
+  background-color: var(--bg-color);
+
+  > ul.navLinks {
+      view-transition-name: nav;
+      margin: 0;
+      list-style: none;
+      padding-inline-start: 0;
+    display: flex;
+    align-items: center;
+      white-space: nowrap;
+      vertical-align: -webkit-baseline-middle;
+
+      > li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        padding-right: 20px;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+  > details.navMenu {
+    margin-left: auto;
+    position: relative;
+
+    > summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    > ul {
+      position: absolute;
+      top: calc(100% + 0.4rem);
+      right: 0;
+      margin: 0;
+      padding: 0.6rem 0.9rem;
+      list-style: none;
+      background-color: color-mix(in srgb, var(--bg-color), transparent 10%);
+      border: 1px solid color-mix(in srgb, var(--color-navy), transparent 65%);
+      border-radius: 0.35rem;
+      min-width: 9rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+
+      > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      > li + li {
+        margin-top: 0.3rem;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/**********************
  * Header
  **********************/
 
- body > header {
+ :is(body, .swipePanel) > header {
   background-position: center;
   background-size: cover;
-  min-height: 50vh;
+  min-height: calc(50vh - 80px);
   position: relative;
-  height: 50vh;
+  height: calc(50vh - 80px);
 
   > img.heroImage,
   > picture > img.heroImage {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: calc(100% - 80px);
-    top:80px;
+    height: 100%;
     /* transform: translateZ(0); Triggers GPU layer promotion */
   }
 
@@ -74,89 +160,6 @@ body > aside {
   > picture > img.heroImage {
     object-fit: cover;
   }
-
-  > nav {
-
-    /* background-image: linear-gradient(to bottom, var(--bg-color), transparent); */
-    height: 80px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: nowrap;
-
-    > ul.navLinks {
-        view-transition-name: nav;
-        margin: 0;
-        list-style: none;
-        padding-inline-start: 0;
-      display: flex;
-      align-items: center;
-        white-space: nowrap;
-        vertical-align: -webkit-baseline-middle;
-
-        > li {
-          display: inline-block;
-          padding: 0;
-          margin: 0;
-          padding-right: 20px;
-        }
-        a {
-          color: inherit;
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-
-    > details.navMenu {
-      margin-left: auto;
-      position: relative;
-
-      > summary {
-        list-style: none;
-        cursor: pointer;
-        font-weight: 500;
-      }
-
-      > summary::-webkit-details-marker {
-        display: none;
-      }
-
-      > ul {
-        position: absolute;
-        top: calc(100% + 0.4rem);
-        right: 0;
-        margin: 0;
-        padding: 0.6rem 0.9rem;
-        list-style: none;
-        background-color: color-mix(in srgb, var(--bg-color), transparent 10%);
-        border: 1px solid color-mix(in srgb, var(--color-navy), transparent 65%);
-        border-radius: 0.35rem;
-        min-width: 9rem;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
-
-        > li {
-          margin: 0;
-          padding: 0;
-        }
-
-        > li + li {
-          margin-top: 0.3rem;
-        }
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    }
 
   > h1 {
     /* text-shadow: 0.1em 0.1em #1116; */
@@ -202,7 +205,7 @@ body > aside {
 /**********************
  * HEADER LOGO, can't be within the `body >`
  **********************/
-header > nav > a#chisenhaleLogo {
+nav > a#chisenhaleLogo {
   display: inline-block;
   vertical-align: -webkit-baseline-middle;
   view-transition-name: chisenhaleLogo;
@@ -231,20 +234,20 @@ header > nav > a#chisenhaleLogo {
 }
 
 /* Navigation mode switching: default to compact menu, expand links on homepage. */
-body > header > nav > ul.navLinks {
+:is(body, .swipePanel) > nav > ul.navLinks {
   display: none;
 }
 
-body > header > nav > details.navMenu {
+:is(body, .swipePanel) > nav > details.navMenu {
   display: inline-flex;
   align-items: center;
 }
 
-body.isHomePage > header > nav > ul.navLinks {
+body.isHomePage > nav > ul.navLinks {
   display: flex;
 }
 
-body.isHomePage > header > nav > details.navMenu {
+body.isHomePage > nav > details.navMenu {
   display: none;
 }
 /**********************
@@ -262,7 +265,7 @@ main {
  * Sponsor Menu
  **********************/
 
- body > menu {
+ :is(body, .swipePanel) > menu {
   margin: 0 auto 0;
   list-style: none;
 
@@ -334,7 +337,7 @@ main {
  * Aside: Navigating between sponsors
  **********************/
 
-body > aside > menu {
+:is(body, .swipePanel) > aside > menu {
   display: flex;
   list-style: none;
   justify-content: center;
@@ -372,6 +375,8 @@ body > aside > menu {
 
 body > footer {
   margin-top: 1vh;
+  position: relative;
+  z-index: 7; /* above the .isIncoming overlay: footer stays put during swipes */
   padding: 1em max(1em, calc((100% - var(--page-width)) / 2));
   font-size: 0.8em;
   color: var(--color-yellow);
@@ -436,6 +441,61 @@ body > footer {
     animation: none;
     mix-blend-mode: normal;
   }
+}
+
+/**********************
+ * Swipe navigation panels
+ * (All motion is applied inline by /assets/sponsor-swipe.js: the postcss
+ * pipeline compiles CSS custom properties to static values at build time,
+ * so runtime var() updates cannot drive transforms.)
+ **********************/
+
+body[data-sponsor-swipe="true"] {
+  touch-action: pan-y;
+  overscroll-behavior-x: none;
+  overflow-x: clip;
+}
+
+/* While a drag is active, text selection would fight the gesture. */
+body[data-sponsor-swipe="true"].isSwipeDragging {
+  user-select: none;
+  cursor: grabbing;
+}
+
+/* The track fills the body between nothing above and the footer below;
+   the panel replicates body's column layout so main keeps stretching. */
+.swipeTrack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.swipeTrack > .swipePanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+/* The incoming page's panel: fixed overlay clipped to the viewport,
+   translated inline by the script so both pages track the finger together. */
+.swipeTrack > .swipePanel.isIncoming {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 6;
+  pointer-events: none;
+  background-color: var(--bg-color);
+}
+
+/* Shadow falls on the leading edge of the incoming panel. */
+.swipeTrack > .swipePanel.isIncoming.fromNext {
+  box-shadow: -18px 0 34px rgba(0, 0, 0, 0.22);
+}
+
+.swipeTrack > .swipePanel.isIncoming.fromPrev {
+  box-shadow: 18px 0 34px rgba(0, 0, 0, 0.22);
 }
 
 /* 
