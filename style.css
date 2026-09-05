@@ -78,11 +78,11 @@ body > aside {
   > nav {
 
     /* background-image: linear-gradient(to bottom, var(--bg-color), transparent); */
-    height: 80px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     gap: 1rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     > ul.navLinks {
         view-transition-name: nav;
@@ -109,8 +109,23 @@ body > aside {
         }
       }
 
+    button.searchToggle {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3em;
+      background: none;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+
+      > svg {
+        display: block;
+        width: 22px;
+        height: 22px;
+      }
+    }
+
     > details.navMenu {
-      margin-left: auto;
       position: relative;
 
       > summary {
@@ -207,6 +222,13 @@ header > nav > a#chisenhaleLogo {
   vertical-align: -webkit-baseline-middle;
   view-transition-name: chisenhaleLogo;
   position: relative;
+  min-width: 0;
+
+  @media (width <= 768px) {
+    body:not(.isHomePage) & {
+      max-width: calc(100% - 140px);
+    }
+  }
 
   body.isHomePage & {
     position: absolute;
@@ -216,7 +238,7 @@ header > nav > a#chisenhaleLogo {
   }
 
   img {
-    max-width: 70vw;
+    max-width: min(70vw, 100%);
     max-height: 3em;
     width: auto;
     height: auto;
@@ -238,6 +260,7 @@ body > header > nav > ul.navLinks {
 body > header > nav > details.navMenu {
   display: inline-flex;
   align-items: center;
+  margin-left: auto;
 }
 
 body.isHomePage > header > nav > ul.navLinks {
@@ -246,6 +269,95 @@ body.isHomePage > header > nav > ul.navLinks {
 
 body.isHomePage > header > nav > details.navMenu {
   display: none;
+}
+
+/**********************
+ * Sponsor Search Results (nav expansion panel)
+ **********************/
+
+#sponsorSearchResults {
+  margin: 4.5rem auto auto;
+  width: min(90vw, 64rem);
+  max-height: min(60vh, 700px);
+  overflow: auto;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--bg-color);
+  color: light-dark(var(--color-navy), var(--color-white));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+  &[open] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 0.5rem;
+    align-content: start;
+  }
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+
+  > form {
+    grid-column: 1 / -1;
+    position: sticky;
+    top: -1rem;
+    z-index: 1;
+    margin: -1rem -1rem 0;
+    padding: 1rem;
+    background-color: inherit;
+
+    input[type="search"] {
+      width: 100%;
+      padding: 0.35em 0.9em;
+      font: inherit;
+      font-size: 0.9em;
+      color: inherit;
+      background-color: color-mix(in srgb, var(--bg-color), transparent 30%);
+      border: 1px solid color-mix(in srgb, currentColor, transparent 60%);
+      border-radius: 999px;
+
+      &::placeholder {
+        color: inherit;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  > .noResults {
+    grid-column: 1 / -1;
+    margin: 0;
+    text-align: center;
+  }
+
+  > a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem;
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      background-color: color-mix(in srgb, currentColor, transparent 88%);
+    }
+
+    &[hidden] {
+      display: none;
+    }
+
+    picture,
+    img {
+      flex: none;
+      width: 90px;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+  }
 }
 /**********************
  * Main Content

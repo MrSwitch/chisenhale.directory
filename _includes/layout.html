@@ -63,12 +63,56 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
         <ul class="navLinks">
           <li><a href="/">Home</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li>
+            <button
+              type="button"
+              class="searchToggle"
+              aria-label="Search sponsors"
+              aria-expanded="false"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <line x1="16.5" y1="16.5" x2="21" y2="21" />
+              </svg>
+            </button>
+          </li>
         </ul>
+          <dialog id="sponsorSearchResults" aria-label="Sponsor search results">
+            <form id="sponsorSearch" action="/" role="search">
+              <input
+                type="search"
+                name="q"
+                placeholder="Search sponsors…"
+                aria-label="Search sponsors"
+                autocomplete="off"
+              />
+            </form>
+            <p class="noResults" hidden>No sponsors match your search.</p>
+            {% for item in collections.sponsors | sort: "data.title" %}
+            <a href="{{ item.url }}" data-title="{{ item.data.title | escape }}">
+              <img src="{{ item.data.heroImg }}" alt="" sizes="90px" eleventy:widths="180" />
+              <span>{{ item.data.title }}</span>
+            </a>
+            {% endfor %}
+          </dialog>
         <details class="navMenu">
           <summary aria-label="Open navigation menu">Menu</summary>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/contact">Contact</a></li>
+            <li>
+              <button
+                type="button"
+                class="searchToggle"
+                aria-label="Search sponsors"
+                aria-expanded="false"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" />
+                  <line x1="16.5" y1="16.5" x2="21" y2="21" />
+                </svg>
+              </button>
+            </li>
           </ul>
         </details>
       </nav>
