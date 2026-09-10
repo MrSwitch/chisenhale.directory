@@ -11,3 +11,15 @@ customElements.define(
     }
   }
 );
+
+// Fade the hero image in once it has loaded, instead of letting it pop in
+// abruptly. If it's already cached (complete) it stays fully visible.
+{
+  const hero = document.getElementById("heroImage");
+  if (hero && !hero.complete) {
+    hero.classList.add("isLoading");
+    hero.addEventListener("load", () => hero.classList.remove("isLoading"), {
+      once: true,
+    });
+  }
+}

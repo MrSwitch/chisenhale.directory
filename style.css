@@ -73,6 +73,12 @@ body > aside {
   > img.heroImage,
   > picture > img.heroImage {
     object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+
+    &.isLoading {
+      opacity: 0;
+    }
   }
 
   > nav {
