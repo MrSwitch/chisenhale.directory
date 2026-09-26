@@ -1,6 +1,4 @@
-{% assign index = collections.sponsors | getCollectionItemIndex %} {% assign
-previousPost = collections.sponsors | getPreviousCollectionItem : page %} {%
-assign nextPost = collections.sponsors | getNextCollectionItem : page %}
+{% assign index = collections.sponsors | getCollectionItemIndex %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -98,18 +96,20 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
 
       {% if page.url contains "/sponsors/" %}
       <p>If you contact {{ title | default: "this business" }}, please mention you found them on the Chisenhale Little Black Book - it really helps benefit the school when our sponsors know this is working</p>
-      {% endif %}
+        <hr />
+        <h2>All Sponsors</h2>
 
-      <menu>
-
-        {% if previousPost %}
-        <li>
-          Prev: <a href="{{ previousPost.url }}"  style="view-transition-name: heading-{{ previousPost.fileSlug }}; view-transition-class: heading;">{{ previousPost.data.title }}</a>
+      <menu class="sponsorList" aria-label="All sponsors">
+        {% for item in collections.sponsors %}
+        <li {% if item.url == page.url %}aria-current="page"{% endif %}>
+          <a href="{{ item.url }}">
+            <img src="{{ item.data.heroImg }}" alt="" sizes="120px" eleventy:widths="240" {% unless item.url == page.url %}style="view-transition-name: hero-image-{{ item.fileSlug }}; view-transition-class: heroImage;"{% endunless %} />
+            <span {% unless item.url == page.url %}style="view-transition-name: heading-{{ item.fileSlug }}; view-transition-class: heading;"{% endunless %}>{{ item.data.title }}</span>
+          </a>
         </li>
-        {% endif %} {% if nextPost %}
-        <li>Next: <a href="{{ nextPost.url }}"  style="view-transition-name: heading-{{ nextPost.fileSlug }}; view-transition-class: heading;">{{ nextPost.data.title }}</a></li>
-        {% endif %}
+        {% endfor %}
       </menu>
+      {% endif %}
     </aside>
 
 
