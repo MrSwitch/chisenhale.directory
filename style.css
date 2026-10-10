@@ -87,6 +87,26 @@ body > aside {
     }
   }
 
+  /* Parallax: on viewports wider than 4:3 the picture inside the hero
+     pans at half the scroll rate while the crop window stays flush with
+     the header. The image box is extended 25vh upwards (the full travel
+     distance); a clip-path hides that extra at rest and recedes in sync
+     with the translate, so the visible edges never move. */
+  @media (aspect-ratio > 4/3) {
+    @supports (animation-timeline: scroll()) {
+      overflow: clip;
+
+      > img.heroImage,
+      > picture > img.heroImage {
+        top: calc(80px - 25vh);
+        height: calc(100% - 80px + 25vh);
+        animation: heroParallax linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 50vh;
+      }
+    }
+  }
+
   > nav {
 
     /* background-image: linear-gradient(to bottom, var(--bg-color), transparent); */
@@ -208,6 +228,19 @@ body > aside {
         left: 0;
       }
     }
+  }
+}
+
+@keyframes heroParallax {
+  from {
+    transform: translateY(0);
+    clip-path: inset(25vh 0 0 0);
+  }
+  to {
+    /* Half of the 50vh scroll range, i.e. half the scroll rate. The
+       clip recedes at the same rate, keeping the visible top edge put. */
+    transform: translateY(25vh);
+    clip-path: inset(0 0 0 0);
   }
 }
 
