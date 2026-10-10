@@ -87,6 +87,22 @@ body > aside {
     }
   }
 
+  /* Parallax: on viewports wider than 3:4 the picture inside the hero
+     pans at half the scroll rate. The box (and therefore the cover
+     zoom) is untouched: the squarish source images already have plenty
+     of hidden vertical content, so the crop window is shifted by a
+     pixel offset on object-position instead. */
+  @media (aspect-ratio >= 3/4) {
+    @supports (animation-timeline: scroll()) {
+      > img.heroImage,
+      > picture > img.heroImage {
+        animation: heroParallax linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 50vh;
+      }
+    }
+  }
+
   > nav {
 
     /* background-image: linear-gradient(to bottom, var(--bg-color), transparent); */
@@ -208,6 +224,16 @@ body > aside {
         left: 0;
       }
     }
+  }
+}
+
+@keyframes heroParallax {
+  from {
+    object-position: 50% calc(50% + 0px);
+  }
+  to {
+    /* Half of the 50vh scroll range, i.e. half the scroll rate */
+    object-position: 50% calc(50% + 25vh);
   }
 }
 
