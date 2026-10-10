@@ -370,6 +370,14 @@ body > aside > menu.sponsorList {
         border-radius: 0.5rem;
         flex-shrink: 0;
       }
+
+      > div {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        overflow: hidden;
+      }
     }
 
     &[aria-current="page"] > a {

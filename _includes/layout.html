@@ -105,7 +105,10 @@
         <li {% if item.url == page.url %}aria-current="page"{% endif %}>
           <a href="{{ item.url }}" data-slug="{{ item.fileSlug }}">
             <img src="{{ item.data.heroImg }}" alt="" sizes="120px" eleventy:widths="240" />
-            <span>{{ item.data.title }}</span>
+            <div>
+              <strong>{{ item.data.title }}</strong>
+              {% if item.data.strapline %}<br /><span>{{ item.data.strapline }}</span> {% endif %}
+            </div>
           </a>
         </li>
         {% endfor %}
