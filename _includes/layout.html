@@ -1,6 +1,4 @@
-{% assign index = collections.sponsors | getCollectionItemIndex %} {% assign
-previousPost = collections.sponsors | getPreviousCollectionItem : page %} {%
-assign nextPost = collections.sponsors | getNextCollectionItem : page %}
+{% assign index = collections.sponsors | getCollectionItemIndex %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,6 +12,7 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin">
     <link rel="icon" href="/assets/icon.svg" type="image/svg">
     <title>{{ title | default: 'Little Black Book'}}</title>
     <meta name="description" content="{{ strapline | default: 'Supporting Chisenhale School' }}">
@@ -98,18 +97,20 @@ assign nextPost = collections.sponsors | getNextCollectionItem : page %}
 
       {% if page.url contains "/sponsors/" %}
       <p>If you contact {{ title | default: "this business" }}, please mention you found them on the Chisenhale Little Black Book - it really helps benefit the school when our sponsors know this is working</p>
-      {% endif %}
+        <hr />
+        <h2>Sponsors</h2>
 
-      <menu>
-
-        {% if previousPost %}
-        <li>
-          Prev: <a href="{{ previousPost.url }}"  style="view-transition-name: heading-{{ previousPost.fileSlug }}; view-transition-class: heading;">{{ previousPost.data.title }}</a>
+      <menu class="sponsorList" aria-label="All sponsors">
+        {% for item in collections.sponsors %}
+        <li {% if item.url == page.url %}aria-current="page"{% endif %}>
+          <a href="{{ item.url }}" data-slug="{{ item.fileSlug }}">
+            <img src="{{ item.data.heroImg }}" alt="" sizes="120px" eleventy:widths="240" />
+            <span>{{ item.data.title }}</span>
+          </a>
         </li>
-        {% endif %} {% if nextPost %}
-        <li>Next: <a href="{{ nextPost.url }}"  style="view-transition-name: heading-{{ nextPost.fileSlug }}; view-transition-class: heading;">{{ nextPost.data.title }}</a></li>
-        {% endif %}
+        {% endfor %}
       </menu>
+      {% endif %}
     </aside>
 
 

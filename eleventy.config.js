@@ -14,6 +14,10 @@ import postcssLightDarkFunction from '@csstools/postcss-light-dark-function';
 export default function (eleventyConfig) {
   const assetVersionCache = new Map();
 
+  // In --serve/--watch mode the config isn't reloaded between builds, so the
+  // cache would keep serving stale ?v= hashes after an asset changes.
+  eleventyConfig.on("eleventy.before", () => assetVersionCache.clear());
+
   eleventyConfig.addFilter("asset", async (assetPath) => {
     if (!assetPath || assetPath.startsWith("http://") || assetPath.startsWith("https://")) {
       return assetPath;
