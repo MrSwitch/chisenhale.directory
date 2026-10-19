@@ -15,6 +15,6 @@ Sessions are tailored to you, whether online, in person or walking and talking i
 Wondering where to start? Visit my website to book a free relaxed discovery call and explore how coaching could support your next step forward towards clarity, confidence and impact.
 
 - T: {% obfuscate "07834 612 086" %}
-- E: {% obfuscate "innerherocoach@gmail.com" %}
+- E: {% obfuscate "joe@innerherocoaching.com" %}
 - W: [https://www.innerherocoaching.co.uk/](https://www.innerherocoaching.co.uk/)
 - LI: [https://www.linkedin.com/in/joeruddock/](https://www.linkedin.com/in/joeruddock/)
