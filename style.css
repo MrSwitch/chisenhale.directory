@@ -48,6 +48,7 @@ body {
 main,
 header > h1,
 header > nav,
+body > nav.siteNav,
 body > menu,
 body > aside {
   margin: 0 auto 0;
@@ -240,7 +241,8 @@ body > aside {
 /**********************
  * HEADER LOGO, can't be within the `body >`
  **********************/
-header > nav > a#chisenhaleLogo {
+header > nav > a#chisenhaleLogo,
+body.isSponsorPage > nav.siteNav > a#chisenhaleLogo {
   display: inline-block;
   vertical-align: -webkit-baseline-middle;
   view-transition-name: chisenhaleLogo;
@@ -285,6 +287,86 @@ body.isHomePage > header > nav > ul.navLinks {
 body.isHomePage > header > nav > details.navMenu {
   display: none;
 }
+
+/* Sponsor navigation sits above the split hero and stays centered to the page. */
+body.isSponsorPage > nav.siteNav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+
+  > ul.navLinks {
+
+body.isSponsorPage > header > img.heroImage,
+body.isSponsorPage > header > picture > img.heroImage {
+  top: 0;
+  height: 100%;
+}
+    display: none;
+    margin: 0;
+    list-style: none;
+    padding-inline-start: 0;
+    white-space: nowrap;
+
+    > li {
+      display: inline-block;
+      margin: 0;
+      padding: 0 20px 0 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  > details.navMenu {
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+
+    > summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    > ul {
+      position: absolute;
+      z-index: 5;
+      top: calc(100% + 0.4rem);
+      right: 0;
+      margin: 0;
+      padding: 0.6rem 0.9rem;
+      list-style: none;
+      background-color: color-mix(in srgb, var(--bg-color), transparent 10%);
+      border: 1px solid color-mix(in srgb, var(--color-navy), transparent 65%);
+      border-radius: 0.35rem;
+      min-width: 9rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+
+      > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      > li + li {
+        margin-top: 0.3rem;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
 /**********************
  * Main Content
  **********************/
@@ -293,6 +375,75 @@ main {
   flex: 1;
   width:100%;
   overflow: auto;
+}
+
+/* On wide sponsor pages, keep the hero and business details side by side.
+   The sponsor directory and footer remain full-width rows beneath them. */
+@media (width >= 1100px) {
+  body.isSponsorPage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto minmax(65vh, auto) auto auto;
+    align-items: stretch;
+
+    > nav.siteNav {
+      grid-column: 1 / -1;
+      grid-row: 1;
+    }
+
+    > header {
+      grid-column: 1;
+      grid-row: 2;
+      min-height: 65vh;
+      height: auto;
+
+      > img.heroImage,
+      > picture > img.heroImage {
+        top: 0;
+        height: 100%;
+      }
+
+      > h1 {
+        left: 0;
+        max-width: 100%;
+      }
+    }
+
+    > .sponsorHeroContent {
+      grid-column: 2;
+      grid-row: 2;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 80px 2rem 2rem;
+
+      > menu {
+        margin: 0 auto;
+        padding: 15px;
+        width: 100%;
+        max-width: var(--page-width);
+      }
+
+      > main {
+        flex: 1;
+        width: 100%;
+        max-width: var(--page-width);
+        margin: 0 auto;
+        overflow: visible;
+      }
+    }
+
+    > aside {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      width: 100%;
+    }
+
+    > footer {
+      grid-column: 1 / -1;
+      grid-row: 4;
+    }
+  }
 }
 
 

@@ -48,29 +48,11 @@
     <link rel="stylesheet" href="{{ '/style.css' | asset }}" />
     <script type="module" src="{{ '/assets/main.js' | asset }}"></script>
   </head>
-  <body {% if page.url == "/" %} class="isHomePage"{% endif %}>
+  <body class="{% if page.url == "/" %}isHomePage {% endif %}{% if page.url contains "/sponsors/" %}isSponsorPage{% endif %}">
+    {% if page.url contains "/sponsors/" %}{% include "nav.html" %}{% endif %}
     <header>
       <img id="heroImage" class="heroImage" src="{{ heroImg }}" alt="" loading="eager" fetchpriority="high" style="view-transition-name: hero-image-{{ page.fileSlug | default: 'home' }}; view-transition-class: heroImage;" />
-      <nav>
-        <a id="chisenhaleLogo" href="/"
-          ><img
-            id="chisenhaleLogoImg"
-            src="/assets/logo.svg"
-            alt="Chisenhale Little Black Books Logo"
-            eleventy:ignore
-        /></a>
-        <ul class="navLinks">
-          <li><a href="/">Home</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-        <details class="navMenu">
-          <summary aria-label="Open navigation menu">Menu</summary>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </details>
-      </nav>
+      {% unless page.url contains "/sponsors/" %}{% include "nav.html" %}{% endunless %}
       {% if title %}
       <h1 class="heroTitle" style="view-transition-name: heading-{{ page.fileSlug }}; view-transition-class: heading;">
         {% if logoTitle %}<img class="logoTitle {% if logoInvert %}logoInvert{% endif %}" src="{{ logoTitle }}" alt="{{ title }}" />{% else %}{% if logo %}<img id="sponsorLogo" class="logo" src="{{ logo }}" alt="{{ title }}" />{% endif %}{{ title }}{% endif %}
@@ -78,6 +60,7 @@
       {% endif %}
     </header>
 
+    {% if page.url contains "/sponsors/" %}<div class="sponsorHeroContent">{% endif %}
     <menu>
       {% if location %}
       <li>
@@ -92,6 +75,7 @@
     </menu>
 
     <main>{{ content }}</main>
+    {% if page.url contains "/sponsors/" %}</div>{% endif %}
 
     <aside>
 
