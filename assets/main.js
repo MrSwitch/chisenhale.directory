@@ -37,9 +37,9 @@ customElements.define(
     );
   };
 
-  const setNames = (link) => {
+  const setNames = (link, { skipImage = false } = {}) => {
     const slug = link.dataset.slug;
-    const img = link.querySelector("img");
+    const img = skipImage ? null : link.querySelector("img");
     const title = link.querySelector("h1, span");
     if (img) {
       img.style.viewTransitionName = `hero-image-${slug}`;
@@ -62,6 +62,21 @@ customElements.define(
   // destination page's hero image and heading.
   window.addEventListener("pageswap", (e) => {
     if (!e.viewTransition || !e.activation) return;
+
+    // Navigating back to the homepage: give this page's hero the same name as
+    // the homepage's hero (see layout.html: hero-image-home) so it animates
+    // into it.
+    const toPath = new URL(e.activation.entry.url).pathname;
+    const hero = document.getElementById("heroImage");
+    if (toPath === "/" && location.pathname !== "/" && hero) {
+      const previous = hero.style.viewTransitionName;
+      hero.style.viewTransitionName = "hero-image-home";
+      e.viewTransition.finished.finally(() => {
+        hero.style.viewTransitionName = previous;
+      });
+      return;
+    }
+
     const link = findLink(e.activation.entry.url);
     if (link) setNames(link);
   });
@@ -75,7 +90,9 @@ customElements.define(
     if (!from) return;
     const link = findLink(from.url);
     if (!link) return;
-    const cleanup = setNames(link);
+    // The homepage hero already carries the shared name, so only name the
+    // card's heading.
+    const cleanup = setNames(link, { skipImage: true });
     e.viewTransition.finished.finally(cleanup);
   });
 }
